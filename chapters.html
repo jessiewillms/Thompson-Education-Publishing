@@ -1,0 +1,18 @@
+---
+layout: chapter_layout
+title: Chapter
+---
+
+{% include head.html %}
+
+<p>chapters.html</p>
+
+{% for item in site.chapters %}
+
+	<header class="chapter--header">
+		<h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+	</header>
+	
+	<article class="header"> </article>
+
+{% endfor %}

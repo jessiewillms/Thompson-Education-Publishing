@@ -1,0 +1,63 @@
+###########
+# site.title, site.author.name
+
+title: Thompson Education Publishing
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Thompson Educational Publishing (TEP) was incorporated in Ontario in October, 1989, giving us over 25 years of experience providing quality books and supplemental materials to instructors and students across Canada at schools, colleges and universities.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://example.com" # the base hostname & protocol for your site
+
+twitter_username: thompsonkto12
+
+tep_support: "support"
+tep_contact: http://thompsonbooks.com/contact-us/
+
+tep_address: >
+  Thompson Educational Publishing, Inc.
+  20 Ripley Avenue
+  Toronto, ON
+  M6S 3N9
+
+tep_email: info@thompsonbooks.com
+tep_phone: 416-766-2763
+
+########
+# more settings
+# 
+# 
+
+# gems: [jekyll-coffeescript, jekyll-watch, jekyll-assets, pug]
+
+collections:
+  reviews:
+      output: true
+  stories:
+      output: true
+  albums:
+      output: true
+  sidebar_history:
+    output: true
+  focus:
+      output: true
+  chapters:
+      output: true
+
+markdown: kramdown
+
+kramdown:
+  auto_ids: true
+
+sass:
+  sass_dir: _sass
+  style:    compressed
+
+
+
+exclude:
+- README.md
+
+
+safe: true
+lsi: false
+

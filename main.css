@@ -1,0 +1,79 @@
+/* 
+Table of contents: 
+
+1. Defaults & resets
+2. Typography
+3. Colors
+4. Images
+5. Maps
+6. Wrappers
+7. Misc.
+8. Footer
+*/
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px; }
+
+.wrapper--outer {
+  width: 100%; }
+
+.wrapper--inner {
+  max-width: 768px;
+  display: block;
+  margin: 5px auto;
+  border: 1px solid darkblue; }
+
+/*
+
+sidebar wrappers
+
+*/
+.chapter--sidebar-history {
+  border: 3px solid red; }
+
+.accordion-toggle {
+  cursor: pointer; }
+
+.accordion-content {
+  display: none; }
+
+.accordion-content.default {
+  display: block; }
+
+table {
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  border-spacing: 0;
+  margin: 1.875em 0;
+  width: 100%; }
+
+table td,
+table th {
+  padding: 15px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: top;
+  font-weight: bold; }
+
+table tr:nth-of-type(odd) {
+  background: #cccccc;
+  text-align: left; }
+
+nav {
+  background: #313131; }
+  nav h1,
+  nav ul {
+    padding: 0;
+    margin: 0; }
+  nav h1,
+  nav li {
+    color: #fff; }
+  nav h1 {
+    float: left;
+    font-size: 16px; }
+  nav ul {
+    float: right; }
+    nav ul li {
+      float: left; }
