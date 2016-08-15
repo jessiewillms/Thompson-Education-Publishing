@@ -1,0 +1,42 @@
+/*
+
+-----------------------------------------------
+2. Defaults & resets & variables
+-----------------------------------------------
+
+*/
+
+.tester {
+  border: 2px solid red;
+}
+
+html {
+  font-size:   16px;
+  line-height: 1.5;
+  margin:           0px !important;
+}
+
+
+.cf:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.cf { display: inline-block; }
+/* start commented backslash hack \*/
+* html .cf { height: 1%; }
+.cf { display: block; }
+
+
+//////////////
+// Misc.
+.hide {
+	display: none
+}
+
+.li--no-bullet {
+  list-style-type: none;
+}

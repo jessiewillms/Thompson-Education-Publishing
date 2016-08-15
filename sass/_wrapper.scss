@@ -1,0 +1,22 @@
+.wrapper--outer {
+  width: 100%;
+}
+
+//  -- wrapp--inner: is the inner wrapper, centred
+.wrapper--inner {
+	// max-width: $ipad--landscape;
+	max-width: $ipad--portrait;
+	display: block;
+	margin: 5px auto;
+	border: 1px solid darkblue;
+}
+
+/*
+
+sidebar wrappers
+
+*/
+
+.chapter--sidebar-history {
+	border: 3px solid red;
+}

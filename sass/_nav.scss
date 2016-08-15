@@ -1,0 +1,24 @@
+nav {
+	background: $color--dark-grey;
+	h1,
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	h1,
+	li {
+		color: $color--white;
+	}
+	h1 {
+		float: left;
+		
+		font-size: $font--size-regular;
+	}
+	ul {
+		float: right;
+		
+		li {
+			float: left;
+		}
+	}
+}

@@ -1,0 +1,136 @@
+/*
+
+-----------------------------------------------
+2. Typography
+-----------------------------------------------
+
+*/
+
+$text--main-font: "Cormorant", Helvetica, Arial, sans-serif;
+$text--secondary-font: "Open Sans", Helvetica, Arial, sans-serif;
+$text--regular: 300;
+$text--bold: 400;
+
+/*
+-----------------------------------------------
+Links
+-----------------------------------------------
+*/
+
+a {
+  // color: $link-color;
+  text-decoration: none;
+
+  strong {
+    color: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+/*
+-----------------------------------------------
+Headings
+-----------------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  font-weight:    bold;
+  font-family:    $text--main-font;
+  line-height:    1.25;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+p,
+td,
+tr,
+li {
+  font-family: $text--secondary-font;
+}
+
+.text--overview-quote {
+  font-size: 30px;
+  line-height: 30px;
+  color: $color--dark-grey;
+}
+
+.text--source {
+  
+}
+.text--bold {
+  font-weight: bold;// $text--bold;
+
+  &-red {
+    color: red;
+  }
+  &-grey {
+    color: grey;
+  }
+}
+/*
+-----------------------------------------------
+Body text
+-----------------------------------------------
+*/
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.text--big-letter {
+	font-size: 30px;
+}
+
+strong {
+  color: $strong-color;
+}
+
+
+/*
+-----------------------------------------------
+Lists
+-----------------------------------------------
+*/
+
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/*
+-----------------------------------------------
+Quotes
+-----------------------------------------------
+*/
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: $blockquote-color;
+  border-left: .25rem solid $blockquote-border-color;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
