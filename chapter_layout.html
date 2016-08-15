@@ -1,0 +1,61 @@
+{% include head.html %}
+
+<section class="wrapper--outer">	
+	
+	<div id="accordion">
+	  <h4 class="accordion-toggle">Accordion 1</h4>
+	  <div class="accordion-content default">
+	    <p>Cras malesuada ultrices augue molestie risus.</p>
+	  </div>
+	  <h4 class="accordion-toggle">Accordion 2</h4>
+	  <div class="accordion-content">
+	    <p>Lorem ipsum dolor sit amet mauris eu turpis.</p>
+	  </div>
+	  <h4 class="accordion-toggle">Accordion 3</h4>
+	  <div class="accordion-content">
+	    <p>Vivamus facilisisnibh scelerisque laoreet.</p>
+	  </div>
+	</div>
+
+	<!-- chapter header -->
+	{% include chapter-header.html %}
+
+	<!-- chapter intro -->
+	{% include chapter-intro.html %}
+
+	<!-- concate the string + variable -->
+	<hr>
+	{% if page.chapter_start != blank %}
+	
+		{% assign chapter_start = "chapter-" %}
+		{% assign chapter_end = "-main-file.html" %}
+
+		{% capture get_chapter_main %}{{ chapter_start }}{{ page.chapter_num }}{{ chapter_end }}{% endcapture %}
+		
+		{% include {{ get_chapter_main }} %}
+
+	{% endif %}
+
+	<!-- chapter in-focus -->
+	{% include chapter-stories-from-field.html %}
+
+	<!-- chapter in-focus -->
+	{% include chapter-in-focus.html %}
+
+	<!-- chapter overview -->
+	{% include chapter-overview.html %}
+
+	<!-- content from each chapter's md/html file -->
+	{{ content }}
+
+	<!-- sidebar -->
+	{% include chapter-sidebar.html %}
+
+	<!-- end of chapter review -->
+	{% include chapter-review.html %}
+
+
+
+</section>
+
+{% include footer.html %}
