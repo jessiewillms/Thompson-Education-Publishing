@@ -1,0 +1,19 @@
+<nav class="cf nav--main-nav">
+	
+	<h1 class="nav--site-title">{{ site.title }}</h1>
+
+	<ul class="nav--main-list">
+	
+	{% for chapter in site.chapters %}
+	
+	  <li class="li--no-bullet">
+	    {{ chapter.number }}
+	  </li>
+	
+	{% endfor %}
+	
+	</ul>
+
+</nav>
+
+

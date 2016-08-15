@@ -1,0 +1,31 @@
+<article class="wrapper--inner chapter--sidebar-in-stories tester">
+	
+	{% for item in site.stories %}
+
+		{% if page.chapter_num == item.stories_chapter %}
+			
+			<h2>{{ item.title }}</h2>
+			<p class="text--bold text--bold-red">{{ item.subtitle }}</p>
+
+			<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+			<p>{{ item.small_image_caption_text_1 }}</p>
+
+			
+
+			{{ item.content }}
+			
+			<aside class="chapter--aside-reflect">
+				<p>{{ item.reflect_box_title }}</p>
+
+				<ul class="ul--list">
+					<li class="li--no-bullet">{{ item.reflect_box_1 }}</li>
+					<li class="li--no-bullet">{{ item.reflect_box_2 }}</li>
+					<li class="li--no-bullet">{{ item.reflect_box_3 }}</li>
+				</ul>
+			</aside>
+			
+		{% endif %}
+
+	{% endfor %}
+
+</article>

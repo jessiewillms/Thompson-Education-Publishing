@@ -1,0 +1,55 @@
+<article class="wrapper--inner chapter--review-section">
+
+{% for item in site.reviews %}
+		
+	  <h2>{{ item.title }}</h2>
+	  
+	{% for work in item.review_content %}
+	<h3>{{ work.title }}</h3>
+
+	<ul>
+	    {% for question in work.questions %}
+	      <li>{{ question.text }}</li>
+	    {% endfor %}
+	</ul>
+	{% endfor %}
+
+    {% for work in item.review_additional_content %}
+      <h3>{{ work.title }}</h3>
+
+      <ul>
+  	    {% for question in work.questions %}
+  	      <li>{{ question.text }}</li>
+  	    {% endfor %}
+      </ul>
+    {% endfor %}
+
+    {% for work in item.website_list %}
+    <h3>{{ work.title }}</h3>
+
+	<ul>
+	    {% for question in work.questions %}
+	      <li>
+	      	<a href="http://{{ question.url }}">{{ question.name}}</a>
+	      	<p>{{ question.desc }}</p>
+	      </li>
+	      	
+	    {% endfor %}
+	</ul>
+    {% endfor %}
+
+{% endfor %}
+
+</article>
+
+
+<!-- 
+	{% if page.chapter_num == item.review_chapter %}{% endif %}
+
+
+	url: www.hc-sc.gc.ca
+	long_desc: Health Canada is the federal department responsible for helping the people of Canada maintain and improve their health.
+
+
+	() ({{ question.long_desc }})
+-->

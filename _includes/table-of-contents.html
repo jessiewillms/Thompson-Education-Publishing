@@ -1,0 +1,14 @@
+<ul class="wrapper--inner">
+
+	{% for chapter in site.chapters %}
+	  <li class="li--no-bullet">
+		
+		{{ chapter.title }}
+
+	    <div class="hide">
+	      {{ chapter.content }}
+	    </div>
+	  </li>
+	{% endfor %}
+
+</ul>

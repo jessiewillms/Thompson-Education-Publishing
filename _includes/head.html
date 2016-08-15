@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>{{ site.title }} by {{ site.author.name }}</title>
+  <link rel="stylesheet" href="{{ "/css/main.css/main.css" | prepend: site.baseurl }}">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant|Open+Sans:300,400" rel="stylesheet">
+  
+  <!-- <script src="https://use.fontawesome.com/27830a8224.js"></script>   -->
+  <!--
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  -->
+   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+</head>
+<body>

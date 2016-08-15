@@ -1,0 +1,19 @@
+<section class="wrapper--inner">
+	
+	{% for cookie in site.cookies %}
+		<div class="cookie">
+			<h2><a href="{{ cookie.url }}">{{ cookie.title }}</a></h2>
+
+			layout
+			title
+			subtitle
+			chapter_num
+			chapter_author
+			intro_quote
+			irrespective
+			intro_quote_attr
+			image_path
+		</div>
+	{% endfor %}
+
+</section>

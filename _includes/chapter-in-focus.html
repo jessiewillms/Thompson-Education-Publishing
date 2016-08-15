@@ -1,0 +1,48 @@
+<article class="wrapper--inner chapter--sidebar-in-focus tester">
+	
+	{% for item in site.focus %}
+
+		{% if page.chapter_num == item.focus_chapter %}
+			
+			<h2>{{ item.title }}</h2>
+			<h3>{{ item.subtitle }}</h3>
+
+			<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+
+			{% if item.small_image_caption_text_1 %}
+				<p>{{ item.small_image_caption_text_1 }}</p>
+			{% endif %}
+
+			{% if item.small_image_caption_name %}
+				<p>{{ item.small_image_caption_name }}</p>
+			{% endif %}
+
+			{% if item.small_image_caption_text %}
+				<p>{{ item.small_image_caption_text }}</p>
+			{% endif %}
+
+			{% if item.small_image_caption_text_2 %}
+				<p>{{ item.small_image_caption_text_2 }}</p>
+			{% endif %}
+
+			{% if item.small_image_caption_text_3 %}
+				<p>{{ item.small_image_caption_text_3 }}</p>
+			{% endif %}
+
+			<img src="{{ item.large_image }}" alt="{{ item.large_image_name }}">
+
+			{% if item.large_image_caption_text %}
+				<p>{{ item.large_image_caption_text }}</p>
+			{% endif %}
+
+			{% if item.large_image_caption_text_2 %}
+				<p>{{ item.large_image_caption_text_2 }}</p>
+			{% endif %}
+
+			{{ item.content }}
+		
+		{% endif %}
+
+	{% endfor %}
+
+</article>
