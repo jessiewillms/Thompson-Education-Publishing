@@ -1,30 +1,31 @@
 {% include head.html %}
 
-<section class="wrapper--outer">	
-	
-	<div id="accordion">
-	  <h4 class="accordion-toggle">Accordion 1</h4>
-	  <div class="accordion-content default">
-	    <p>Cras malesuada ultrices augue molestie risus.</p>
-	  </div>
-	  <h4 class="accordion-toggle">Accordion 2</h4>
-	  <div class="accordion-content">
-	    <p>Lorem ipsum dolor sit amet mauris eu turpis.</p>
-	  </div>
-	  <h4 class="accordion-toggle">Accordion 3</h4>
-	  <div class="accordion-content">
-	    <p>Vivamus facilisisnibh scelerisque laoreet.</p>
-	  </div>
-	</div>
+<!-- chapter navigation -->
+<!-- {% include chapter-navigation.html %} -->
+<!-- ./end chapter navigation -->
 
+<section class="wrapper--outer">
+
+	
 	<!-- chapter header -->
 	{% include chapter-header.html %}
+	<!-- ./end chapter header -->
 
 	<!-- chapter intro -->
 	{% include chapter-intro.html %}
+	<!-- ./end chapter intro -->
+	
+	<!-- chapter overview -->
+	{% include chapter-overview.html %}
+	<!-- ./end chapter overview -->
 
-	<!-- concate the string + variable -->
-	<hr>
+	<div class="divider"></div>
+	
+	<!-- content from each chapter's md/html file -->
+	{{ content }}
+	<!-- ./end content from each chapter's md/html file -->
+
+	<!-- get main file -->
 	{% if page.chapter_start != blank %}
 	
 		{% assign chapter_start = "chapter-" %}
@@ -34,28 +35,45 @@
 		
 		{% include {{ get_chapter_main }} %}
 
-	{% endif %}
+	{% endif %}<!-- ./end get main file -->
 
-	<!-- chapter in-focus -->
+	<div class="divider"></div>
+	
+	<!-- stories from the field -->
 	{% include chapter-stories-from-field.html %}
+	<!-- ./end stories from the field -->
+
+	<div class="divider"></div>
 
 	<!-- chapter in-focus -->
 	{% include chapter-in-focus.html %}
-
-	<!-- chapter overview -->
-	{% include chapter-overview.html %}
-
-	<!-- content from each chapter's md/html file -->
-	{{ content }}
+	<!-- ./end chapter in-focus -->
+	
+	<div class="divider"></div>
 
 	<!-- sidebar -->
-	{% include chapter-sidebar.html %}
+	{% include chapter-history-sidebar.html %}
+	
+	<!-- chapter social work -->
+	{% include chapter-social-work.html %}
+	<!-- ./end chapter social work -->
+
+	<div class="divider"></div>
+
+	<!-- person profile -->
+	{% include chapter-social-work-practitioner.html %}
+	<!-- person profile -->
+
+	<div class="divider"></div>
 
 	<!-- end of chapter review -->
 	{% include chapter-review.html %}
+	<!-- end of chapter review -->
 
-
-
+	<!-- chapter-6-1-table.html -->
+	{% include chapter-6-1-table.html %}
+	<!-- chapter-6-1-table.html -->
+	
 </section>
 
 {% include footer.html %}

@@ -1,0 +1,16 @@
+---
+layout: table-of-content
+title: Table of Contents
+---
+
+{% include head.html %}
+
+{% for item in site.chapters %}
+
+	<header class="chapter--header">
+		<h2><a href="{{ item.url }}"> {{ item.title }} <span class="text--chapter-number">{{ item.chapter_num }}</span></a></h2>
+	</header>
+
+{% endfor %}
+
+{% include footer.html %}
