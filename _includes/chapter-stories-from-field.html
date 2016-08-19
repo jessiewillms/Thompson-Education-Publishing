@@ -1,28 +1,67 @@
-<article class="wrapper--inner chapter--sidebar-in-stories tester">
+<article class="wrapper--inner chapter--sidebar-in-stories" id="js-accordion">
 	
 	{% for item in site.stories %}
 
 		{% if page.chapter_num == item.stories_chapter %}
 			
-			<h2>{{ item.title }}</h2>
-			<p class="text--bold text--bold-red">{{ item.subtitle }}</p>
+			<div class="grid--full">
+				
+				{% if item.subtitle %}
+					<p class="_background--span-color text--bold text--bold-grey text--center">{{ item.subtitle }}</p>
+				{% endif %}
+				
+				{% if item.title %}
+					<h2 class="text--center js-accordion-toggle">{{ item.title }} <i class="fa fa-arrow-right fa-white" aria-hidden="true"></i></h2>
 
-			<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
-			<p>{{ item.small_image_caption_text_1 }}</p>
+					<!-- <button class=" button--centered button button--red">Click to view <i class="fa fa-arrow-right fa-white" aria-hidden="true"></i></button> -->
+				{% endif %}
+				
+				<div class="js-accordion-content grid--full">
 
+					{% assign get_item_content = item.content %}
+					
+					{% assign initial_content = get_item_content | truncatewords: 140, '' %}
+					
+					{% assign secondary_content = get_item_content | remove_first: initial_content %}
+					
+					<div class="grid--full">
+						
+						{{ initial_content }}
+
+						{% if item.small_image %}
+							<div class="image--small-wrap filter--greyscale">
+								
+								<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+
+								{% if item.small_image_caption_text_1 %}
+									<p>{{ item.small_image_caption_text_1 }}</p>
+								{% endif %}
+
+							</div>
+						{% endif %}
+
+					</div>
+					
+					<div class="grid--full">
+						
+						{{ secondary_content }}
+
+					</div>
+					
+					<aside class="chapter--aside-reflect">
+						<p class="text--bold text--bold-grey">{{ item.reflect_box_title }}</p>
+
+						<ul class="ul--list">
+							<li class="li--no-bullet">{{ item.reflect_box_1 }}</li>
+							<li class="li--no-bullet">{{ item.reflect_box_2 }}</li>
+							<li class="li--no-bullet">{{ item.reflect_box_3 }}</li>
+						</ul>
+
+						<p class="js-close text--close-accordian"><strong><i class="fa fa-times" aria-hidden="true"></i></strong> Close </p>
+					</aside>
+				</div>
+			</div>
 			
-
-			{{ item.content }}
-			
-			<aside class="chapter--aside-reflect">
-				<p>{{ item.reflect_box_title }}</p>
-
-				<ul class="ul--list">
-					<li class="li--no-bullet">{{ item.reflect_box_1 }}</li>
-					<li class="li--no-bullet">{{ item.reflect_box_2 }}</li>
-					<li class="li--no-bullet">{{ item.reflect_box_3 }}</li>
-				</ul>
-			</aside>
 			
 		{% endif %}
 

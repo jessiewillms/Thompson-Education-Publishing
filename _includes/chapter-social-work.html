@@ -1,0 +1,32 @@
+<article class="wrapper--inner chapter--sidebar-social-work tester" id="js-accordion">
+	
+	{% for item in site.social_work %}
+
+		{% if page.chapter_num == item.social_work_chapter %}
+			
+			{% if item.subtitle %}
+				<p class="background--span-color text--bold text--bold-grey text--center">{{ item.subtitle }}</p>
+			{% endif %}
+			
+			{% if item.title %}
+				<h2 class="js-accordion-toggle text--center">{{ item.title }}</h2>
+			{% endif %}
+
+			<div class="js-accordion-content">
+
+				{% if item.small_image %}
+					<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+				{% endif %}
+
+				{% if item.small_image_caption_text_1 %}
+					<p>{{ item.small_image_caption_text_1 }}</p>
+				{% endif %}
+				
+				{{ item.content }}
+
+			</div>
+		{% endif %}
+
+	{% endfor %}
+
+</article>

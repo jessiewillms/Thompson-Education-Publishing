@@ -1,0 +1,43 @@
+<article class="wrapper--inner chapter--sidebar-social-worker-practitioner cf">
+	
+	{% for item in site.social_work_practitioner %}
+
+		{% if page.chapter_num == item.sw_practitioner_chapter %}
+			
+			<!-- get author image -->
+			<div class="grid--half">
+				<div class="hex-wrap">
+					
+					<div class="hexagon filter--greyscale" style="background-image:url('http://127.0.0.1:4000{{ item.small_image }}')">
+					  <div class="hex-top"></div>
+					  <div class="hex-bottom"></div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- get intro text -->
+			<div class="grid--half cf">
+
+				<h2>{{ item.title }}</h2>
+
+				<p class="text--bold text--bold--grey background--span-color">{{ item.subtitle }}</p>
+
+				<p>{{ item.small_image_caption_text_1 }}</p>
+		
+				<!-- on click, will show modal -->
+				<button class="button button--red js-button--open-modal" id="{{ page.chapter_num }}">Open Case Study <i class="fa fa-arrow-right fa-white" aria-hidden="true"></i></button>
+				
+			</div>
+
+			<!-- this is the hidden modal -->
+			<div class="grid--full js-hide" id="{{ page.chapter_num }}">
+				{{ item.content }}
+			</div>
+			
+
+		{% endif %}
+
+	{% endfor %}
+
+</article>

@@ -1,15 +1,22 @@
-<header class="wrapper--inner">
+{% if page.intro_quote or page.chapter_author %}
+<header class="wrapper--inner chapter--header">
 	
-	<img src="{{ page.image_path }}" alt="{{ page.image_path }}">
+	<div class="hexagon-wrap">
+		<div class="small-hexagon"></div>
+		<div class="hexagon-chapter-number">{{ page.chapter_num }}</div>
+	</div>
 
-	<!-- get current content -->
-	<h2 class="text--chapter-title">{{ page.title }}</h2>
-	<h3 class="text--chapter-subtitle">{{ page.subtitle}}</h3>
-	
-	<p class="text--chapter-number">{{ page.chapter_num }}</p>
-	<p class="text--chapter-author">{{ page.chapter_author }}</p>
+	{% if page.intro_quote %}
+		<p class="text--chapter-quote">{{ page.intro_quote }}</p>
+	{% endif %}
 
-	<p class="text--chapter-quote">{{ page.intro_quote }}</p>
-	<p class="text--chapter-attr">{{ page.intro_quote_attr }}</p>
+	{% if page.intro_quote_attr %}
+		<p class="text--chapter-attr">—{{ page.intro_quote_attr }}</p>
+	{% endif %}
 	
+	{% if page.chapter_author %}
+		<p class="text--chapter-author text--bold text--bold-grey"><strong>Chapter author: </strong>{{ page.chapter_author }}</p>
+	{% endif %}
+
 </header>
+{% endif %}

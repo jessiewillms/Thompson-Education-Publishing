@@ -7,7 +7,7 @@
 	{% for chapter in site.chapters %}
 	
 	  <li class="li--no-bullet">
-	    {{ chapter.number }}
+	    <a href="{{ chapter.url }}">{{ chapter.chapter_num }}</a>
 	  </li>
 	
 	{% endfor %}

@@ -1,0 +1,16 @@
+<ul class="modal--pop-up js-hide">
+	<p style="width:100%;height:50px;background:black"></p>
+	{% for chapter in site.chapters %}
+		{% if page.chapter_num == chapter.chapter_num %}
+			<li class="text--large-text li--no-bullet li--current-chapter">
+				<a href="{{ chapter.url }}">{{ chapter.chapter_num }}</a>
+			</li>
+		{% else if %}
+			<li class="text--large-text li--no-bullet">
+				<a href="{{ chapter.url }}">{{ chapter.chapter_num }}</a>
+			</li>
+		{% endif %}
+
+	{% endfor %}
+
+</ul>

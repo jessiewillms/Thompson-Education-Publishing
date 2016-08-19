@@ -1,0 +1,50 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+  
+  console.log(' js-accordion-toggle ');
+  
+  $(document).ready(function($) {
+
+    // accordian section
+    // 
+    
+    $('.js-accordion-toggle').click(function(){
+
+      console.log('click');
+
+      $('.js-accordion-toggle').removeClass('li--active');
+       // 'js-accordion-content')
+      
+      $(this).addClass('li--active'),
+      $(this).next().addClass('li--active');
+
+      //Expand or collapse this panel
+      $(this).next().slideToggle('slow');
+
+      //Hide the other panels
+      $(".js-accordion-content").not($(this).next()).slideUp('fast');
+
+    });
+
+
+    $('.js-close').on('click', function(){
+      $(".js-accordion-content").slideUp('fast');
+    });
+
+    // TODO add the navigation update
+    // 
+    
+    /*
+    $('.js-button--open-modal').on('click',function(){
+
+      console.log( 'get_id' );
+
+      console.log( $(this).attr('id'); );
+    
+    });
+    */
+
+  });
+  
+</script>

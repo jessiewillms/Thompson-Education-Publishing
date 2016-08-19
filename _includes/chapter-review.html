@@ -5,16 +5,19 @@
 	  <h2>{{ item.title }}</h2>
 	  
 	{% for work in item.review_content %}
-	<h3>{{ work.title }}</h3>
+	<section class="chapter--review-section-inner">
+		<h3>{{ work.title }}</h3>
 
-	<ul>
-	    {% for question in work.questions %}
-	      <li>{{ question.text }}</li>
-	    {% endfor %}
-	</ul>
-	{% endfor %}
-
+		<ul>
+		    {% for question in work.questions %}
+		      <li>{{ question.text }}</li>
+		    {% endfor %}
+		</ul>
+	</section>
+	{% endfor %}	
+	
     {% for work in item.review_additional_content %}
+	<section class="chapter--review-section-inner">
       <h3>{{ work.title }}</h3>
 
       <ul>
@@ -22,9 +25,11 @@
   	      <li>{{ question.text }}</li>
   	    {% endfor %}
       </ul>
+	</section>
     {% endfor %}
 
     {% for work in item.website_list %}
+	<section class="chapter--review-section-inner">
     <h3>{{ work.title }}</h3>
 
 	<ul>
@@ -36,6 +41,7 @@
 	      	
 	    {% endfor %}
 	</ul>
+    </section>
     {% endfor %}
 
 {% endfor %}

@@ -1,45 +1,72 @@
-<article class="wrapper--inner chapter--sidebar-in-focus tester">
+<article class="wrapper--inner chapter--sidebar-in-focus">
 	
 	{% for item in site.focus %}
 
 		{% if page.chapter_num == item.focus_chapter %}
+		
+			<div class="grid--full">
+				{% if item.large_image %}
+					<!-- background image on header -->
+					<header style="background-image:url('http://127.0.0.1:4000{{ item.large_image }}')" class="background--image-cover">
+					</header>
+				
+				{% else %}
+				
+					<!-- fallback image -->
+					<header style="background-image:url('http://127.0.0.1:4000/assets/chapters/fallback.jpg')" class="background--image-cover">
+					</header>
+				{% endif %}
+
+
+				<div class="header--text-wrap">
+					<div class="hexagon-wrap">
+						<div class="small-hexagon"></div>
+						<div class="hexagon-chapter-number">{{ page.chapter_num }}</div>
+					</div>
+					<!-- section titles -->
+					<h2>{{ item.title }}</h2>
+					<h3 class="text--sans-serif">{{ item.subtitle }}</h3>
+
+					{% if item.byline %}
+						<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>
+					{% endif %}
+				</div>
+				
+				{% if item.large_image_caption_text %}
+					<p>{{ item.large_image_caption_text }}</p>
+				{% endif %}
+
+				{% if item.large_image_caption_text_2 %}
+					<p>{{ item.large_image_caption_text_2 }}</p>
+				{% endif %}
+
+				<section class="image--small-wrap">
+					<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+
+					{% if item.small_image_caption_text_1 %}
+						<p>{{ item.small_image_caption_text_1 }}</p>
+					{% endif %}
+				</section>
+
+				{% if item.small_image_caption_name %}
+					<p>{{ item.small_image_caption_name }}</p>
+				{% endif %}
+
+				{% if item.small_image_caption_text %}
+					<p>{{ item.small_image_caption_text }}</p>
+				{% endif %}
+
+				{% if item.small_image_caption_text_2 %}
+					<p>{{ item.small_image_caption_text_2 }}</p>
+				{% endif %}
+
+				{% if item.small_image_caption_text_3 %}
+					<p>{{ item.small_image_caption_text_3 }}</p>
+				{% endif %}
+
+				{{ item.content }}
+			</div>
 			
-			<h2>{{ item.title }}</h2>
-			<h3>{{ item.subtitle }}</h3>
-
-			<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
-
-			{% if item.small_image_caption_text_1 %}
-				<p>{{ item.small_image_caption_text_1 }}</p>
-			{% endif %}
-
-			{% if item.small_image_caption_name %}
-				<p>{{ item.small_image_caption_name }}</p>
-			{% endif %}
-
-			{% if item.small_image_caption_text %}
-				<p>{{ item.small_image_caption_text }}</p>
-			{% endif %}
-
-			{% if item.small_image_caption_text_2 %}
-				<p>{{ item.small_image_caption_text_2 }}</p>
-			{% endif %}
-
-			{% if item.small_image_caption_text_3 %}
-				<p>{{ item.small_image_caption_text_3 }}</p>
-			{% endif %}
-
-			<img src="{{ item.large_image }}" alt="{{ item.large_image_name }}">
-
-			{% if item.large_image_caption_text %}
-				<p>{{ item.large_image_caption_text }}</p>
-			{% endif %}
-
-			{% if item.large_image_caption_text_2 %}
-				<p>{{ item.large_image_caption_text_2 }}</p>
-			{% endif %}
-
-			{{ item.content }}
 		
 		{% endif %}
 
