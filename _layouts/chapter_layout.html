@@ -1,11 +1,6 @@
 {% include head.html %}
 
-<!-- chapter navigation -->
-<!-- {% include chapter-navigation.html %} -->
-<!-- ./end chapter navigation -->
-
 <section class="wrapper--outer">
-
 	
 	<!-- chapter header -->
 	{% include chapter-header.html %}
@@ -27,7 +22,7 @@
 
 	<!-- get main file -->
 	{% if page.chapter_start != blank %}
-	
+
 		{% assign chapter_start = "chapter-" %}
 		{% assign chapter_end = "-main-file.html" %}
 
@@ -42,13 +37,13 @@
 	<!-- stories from the field -->
 	{% include chapter-stories-from-field.html %}
 	<!-- ./end stories from the field -->
-
+	
 	<div class="divider"></div>
 
 	<!-- chapter in-focus -->
 	{% include chapter-in-focus.html %}
 	<!-- ./end chapter in-focus -->
-	
+
 	<div class="divider"></div>
 
 	<!-- sidebar -->
@@ -73,7 +68,7 @@
 	<!-- chapter-6-1-table.html -->
 	{% include chapter-6-1-table.html %}
 	<!-- chapter-6-1-table.html -->
-	
+
 </section>
 
 {% include footer.html %}
