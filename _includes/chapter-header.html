@@ -1,10 +1,10 @@
 {% if page.intro_quote or page.chapter_author %}
+
+<section class="wrapper--full">
+	<img src="{{ page.image_path }}" alt="">
+</section>
+
 <header class="wrapper--inner chapter--header">
-	
-	<div class="hexagon-wrap">
-		<div class="small-hexagon"></div>
-		<div class="hexagon-chapter-number">{{ page.chapter_num }}</div>
-	</div>
 
 	{% if page.intro_quote %}
 		<p class="text--chapter-quote">{{ page.intro_quote }}</p>

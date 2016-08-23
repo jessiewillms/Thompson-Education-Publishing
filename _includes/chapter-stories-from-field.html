@@ -11,32 +11,40 @@
 				{% endif %}
 				
 				{% if item.title %}
-					<h2 class="text--center js-accordion-toggle">{{ item.title }} <i class="fa fa-arrow-right fa-white" aria-hidden="true"></i></h2>
+					<h2 class="text--center js-accordion-toggle">{{ item.title }}</h2>
+					<!-- <i class="fa fa-arrow-right fa-white" aria-hidden="true"></i> -->
 
-					<!-- <button class=" button--centered button button--red">Click to view <i class="fa fa-arrow-right fa-white" aria-hidden="true"></i></button> -->
 				{% endif %}
 				
 				<div class="js-accordion-content grid--full">
 
 					{% assign get_item_content = item.content %}
 					
-					{% assign initial_content = get_item_content | truncatewords: 140, '' %}
+					{% assign initial_content = get_item_content | truncatewords: 125, '' %}
 					
-					{% assign secondary_content = get_item_content | remove_first: initial_content %}
+					{% assign secondary_content = get_item_content | replace: initial_content, ' ' %}
 					
 					<div class="grid--full">
 						
 						{{ initial_content }}
 
+					</div>
+					
+					<div class="grid--full cf">
+
 						{% if item.small_image %}
-							<div class="image--small-wrap filter--greyscale">
-								
+							<div class="_image--small-wrap grid--two-third filter--greyscale">
+
 								<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
 
+							</div>
+
+							<div class="wrap--caption-text grid--third">
+								
 								{% if item.small_image_caption_text_1 %}
 									<p>{{ item.small_image_caption_text_1 }}</p>
 								{% endif %}
-
+								
 							</div>
 						{% endif %}
 

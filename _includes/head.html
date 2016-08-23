@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +7,33 @@
 
   <title>{{ site.title }} by {{ site.author.name }}</title>
   <link rel="stylesheet" href="{{ "/css/main.css/main.css" | prepend: site.baseurl }}">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-  
-  <link href="https://fonts.googleapis.com/css?family=Cormorant:400,400i,700,700i" rel="stylesheet">
 
-  
-  <!-- <script src="https://use.fontawesome.com/27830a8224.js"></script>   -->
-  <!--
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-  -->
-   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Cormorant:400,400i,700,700i" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/27830a8224.js"></script>  
+ 
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
 </head>
 <body>
 
-<p>show in-chapter menu</p>
+<!-- scroll progress -->
+<div class="progress--outer-wrap" id="js-progress-bar">
+  <div class="progress--inner-wrap"></div>
+</div>
+
+<!-- chapter navigation -->
+<nav class="wrapper--outer">
+  <ul>
+    
+    <div class="hexagon-wrap">
+      <div class="small-hexagon"></div>
+      <div class="hexagon-chapter-number">{{ page.chapter_num }}</div>
+    </div>
+
+    <li class="li--no-bullet li--section-update" id="js-update-with-title"> {{ page.title }} </li>
+  
+  </ul>
+</nav>
+
+

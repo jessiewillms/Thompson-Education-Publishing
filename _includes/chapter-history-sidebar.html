@@ -1,61 +1,68 @@
-<article class="wrapper--inner chapter--sidebar-history">
-	
-	{% for item in site.albums %}
+<!-- loop over history -->	
+{% for item in site.history %}
+
+<article class="chapter--sidebar-history" id="pg-">
 	  
-	  <section class="grid--full">
-	  	  {% if page.chapter_num == item.history_chapter %}
-	  	    
-	  	    <section class="image--large-wrap">
-				<img src="{{ item.large_image }}" alt="{{ item.large_image_name }}">
-				
-				{% if item.large_image_caption_text %}
-					<p>{{ item.large_image_caption_text }}</p>
-				{% endif %}
+	<!-- check if correct chapter -->
+	{% if page.chapter_num == item.history_chapter %}
 
-				{% if item.large_image_caption_text_2 %}
-					<p>{{ item.large_image_caption_text_2 }}</p>
-				{% endif %}
-	  	    </section>
-
-	  	    <h2>{{ item.title }}</h2>
+	<section class="wrapper--inner grid--full">
+	  	    <h2 class="js-section-title">{{ item.title }}</h2>
 	  	    <p>{{ item.artist }}</p>
+	</section>
 
-	  	    <section class="image--small-wrap">
+    <section class="wrapper--outer cf image--large-wrap">
+		<img src="{{ item.large_image }}" alt="{{ item.large_image_name }}">
+		
+		{% if item.large_image_caption_text %}
+			<p class="text--caption">{{ item.large_image_caption_text }}</p>
+		{% endif %}
 
-	  	    	<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+		{% if item.large_image_caption_text_2 %}
+			<p class="text--caption">{{ item.large_image_caption_text_2 }}</p>
+		{% endif %}
+    </section>
 
-	  	    	{% if item.small_image_caption_name %}
-	  	    		<p>{{ item.small_image_caption_name }}</p>
-	  	    	{% endif %}
+    <div class="wrapper--inner grid--full">
+    	{{ item.content }}
+    </div>
 
-	  	    	{% if item.small_image_caption_text %}
-	  	    		<p>{{ item.small_image_caption_text }}</p>
-	  	    	{% endif %}
+    <section class="wrapper--outer cf image--small-wrap">
 
-	  	    	{% if item.small_image_caption_text_1 %}
-  	    			<p>{{ item.small_image_caption_text_1 }}</p>
-	  	    	{% endif %}
-		  	    
-		  	    {% if item.small_image_caption_text_2 %}
-		  			<p>{{ item.small_image_caption_text_2 }}</p>
-		  	    {% endif %}
-		  		
-		  	    {% if item.small_image_caption_text_3 %}
-		  	    	<p>{{ item.small_image_caption_text_3 }}</p>
-		  	    {% endif %}
-	  		
-	  	    </section>
+    	{% if item.small_image  %}
+    	<div class="grid--two-third">
+    		<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+    	</div>
+    	{% endif %}
 
-	  	    <div class="grid--full">
-	  	    	
-	  	    	{{ item.content }}
-	  	    		
-	  	    </div>
+    	{% if item.small_image_caption_name or small_image_caption_text  %}
+    	<div class="wrap--caption-text grid--third">
+    		
+    		{% if item.small_image_caption_name %}
+    			<p class="text--caption">{{ item.small_image_caption_name }}</p>
+	    	{% endif %}
 
-	  	    {% endif %}
-	  </section>
+	    	{% if item.small_image_caption_text %}
+	    		<p class="text--caption">{{ item.small_image_caption_text }}</p>
+	    	{% endif %}
+
+	    	{% if item.small_image_caption_text_1 %}
+				<p class="text--caption">{{ item.small_image_caption_text_1 }}</p>
+	    	{% endif %}
+		    
+		    {% if item.small_image_caption_text_2 %}
+				<p class="text--caption">{{ item.small_image_caption_text_2 }}</p>
+		    {% endif %}
+			
+		    {% if item.small_image_caption_text_3 %}
+		    	<p class="text--caption">{{ item.small_image_caption_text_3 }}</p>
+		    {% endif %}
+    	</div>
+    	{% endif %}
+	
+    </section>
+
+	{% endif %}<!-- check if correct chapter -->
 	  
-	  
-	{% endfor %}
-
 </article>
+{% endfor %}<!-- ./end loop over history -->

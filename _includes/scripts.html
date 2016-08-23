@@ -8,7 +8,6 @@
 
     // accordian section
     // 
-    
     $('.js-accordion-toggle').click(function(){
 
       console.log('click');
@@ -20,31 +19,52 @@
       $(this).next().addClass('li--active');
 
       //Expand or collapse this panel
-      $(this).next().slideToggle('slow');
+      $(this).next().addClass('animated fadeIn').slideToggle('slow');
 
       //Hide the other panels
       $(".js-accordion-content").not($(this).next()).slideUp('fast');
 
     });
 
-
     $('.js-close').on('click', function(){
       $(".js-accordion-content").slideUp('fast');
     });
 
-    // TODO add the navigation update
-    // 
-    
-    /*
-    $('.js-button--open-modal').on('click',function(){
+    var $window_height = parseInt( $(document).height() );
 
-      console.log( 'get_id' );
+    // on scroll, update top nav
+    $(window).on("scroll resize", function(){
 
-      console.log( $(this).attr('id'); );
-    
+        // get update box
+        var $h2_position = $('#js-update-with-title').offset();
+        
+        var title_distance_from_top = parseInt( $('#js-update-with-title').offset().top )
+
+        var percent_through_story = Math.round( (title_distance_from_top / $window_height) * 100 );
+
+        console.log(percent_through_story);
+        
+        $('.progress--inner-wrap').css( 'width', '' + percent_through_story + '%' );
+
+        // loop over all headers
+        $('.js-section-title').each(function(){
+            
+            // check if header is at the top
+            if ( $h2_position.top >= $(this).offset().top && $h2_position.top <= $(this).next().offset().top ) {
+                
+                $('#js-update-with-title').html( $(this).text() );
+                
+                return; //break the loop
+            }
+
+        });
+
     });
-    */
 
-  });
+    // init the value
+    $(window).trigger('scroll'); 
+
+  }); // end doc ready
   
+
 </script>

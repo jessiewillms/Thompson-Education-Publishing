@@ -1,10 +1,12 @@
-<article class="wrapper--inner chapter--sidebar-in-focus">
+<article class="wrapper--outer chapter--sidebar-in-focus">
 	
 	{% for item in site.focus %}
 
+		<!-- check chapter -->
 		{% if page.chapter_num == item.focus_chapter %}
 		
-			<div class="grid--full">
+			<!-- header image + bkg -->
+			<div class="wrapper--outer">
 				{% if item.large_image %}
 					<!-- background image on header -->
 					<header style="background-image:url('http://127.0.0.1:4000{{ item.large_image }}')" class="background--image-cover">
@@ -16,21 +18,52 @@
 					<header style="background-image:url('http://127.0.0.1:4000/assets/chapters/fallback.jpg')" class="background--image-cover">
 					</header>
 				{% endif %}
+			</div><!-- .end header image + bkg -->
 
+			{% if page.chapter_num or item.title %}
 
+			<div class="wrapper--inner">
 				<div class="header--text-wrap">
-					<div class="hexagon-wrap">
-						<div class="small-hexagon"></div>
+						<div class="hexagon-wrap">
+							<div class="small-hexagon"></div>
+						<!-- TODO get icons for the chapter/component -->
 						<div class="hexagon-chapter-number">{{ page.chapter_num }}</div>
-					</div>
+						</div>
+
 					<!-- section titles -->
-					<h2>{{ item.title }}</h2>
-					<h3 class="text--sans-serif">{{ item.subtitle }}</h3>
+					{% if item.title %}
+					<!-- TODO find better solution for label -->
+					<h2 class="js-section-title"><em class="js-category-title js-hide">{{ item.category_long }}:</em> {{ item.title }}</h2>
+					{% endif %}
+
+					{% if item.subtitle %}
+					<h3 class="text--sans-serif"> {{ item.subtitle }}</h3>
+					{% endif %}
 
 					{% if item.byline %}
-						<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>
+					<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>
 					{% endif %}
-				</div>
+				</div><!-- end the chapter header wrap -->
+			</div>
+			  
+			{% endif %}
+
+			<!-- split the content -->
+			{% assign get_item_content = item.content %}
+			{% assign initial_content = get_item_content | truncatewords: 200, '' %}
+			
+			{% assign secondary_content = get_item_content | replace: initial_content, ' ' %}
+
+			{% if initial_content %}
+			<section class="wrapper--inner grid--full">
+				<hr>
+				{{ initial_content }}
+				<hr>
+			</section>
+			{% endif %}
+
+			{% if item.large_image_caption_text or item.large_image_caption_text_2 %}
+			<section class="wrap-inner grid--full ">
 				
 				{% if item.large_image_caption_text %}
 					<p>{{ item.large_image_caption_text }}</p>
@@ -39,36 +72,46 @@
 				{% if item.large_image_caption_text_2 %}
 					<p>{{ item.large_image_caption_text_2 }}</p>
 				{% endif %}
-
-				<section class="image--small-wrap">
+			</section>
+			{% endif %}
+			
+			{% if secondary_content %}
+			<section class="wrapper--inner">
+				<!-- TODO: don't repeat the initial content -->
+				{{ secondary_content }}
+			</section>
+			{% endif %}
+			
+			<!-- images -->
+			<div class="wrapper--outer grid--full cf">
+				<div class="grid--two-third">
 					<img src="{{ item.small_image }}" alt="{{ small_image_caption_name }}">
+				</div>
 
+				<div class="wrap--caption-text grid--third">
 					{% if item.small_image_caption_text_1 %}
 						<p>{{ item.small_image_caption_text_1 }}</p>
 					{% endif %}
-				</section>
 
-				{% if item.small_image_caption_name %}
-					<p>{{ item.small_image_caption_name }}</p>
-				{% endif %}
+					{% if item.small_image_caption_name %}
+						<p>{{ item.small_image_caption_name }}</p>
+					{% endif %}
 
-				{% if item.small_image_caption_text %}
-					<p>{{ item.small_image_caption_text }}</p>
-				{% endif %}
+					{% if item.small_image_caption_text %}
+						<p>{{ item.small_image_caption_text }}</p>
+					{% endif %}
 
-				{% if item.small_image_caption_text_2 %}
-					<p>{{ item.small_image_caption_text_2 }}</p>
-				{% endif %}
+					{% if item.small_image_caption_text_2 %}
+						<p>{{ item.small_image_caption_text_2 }}</p>
+					{% endif %}
 
-				{% if item.small_image_caption_text_3 %}
-					<p>{{ item.small_image_caption_text_3 }}</p>
-				{% endif %}
-
-				{{ item.content }}
+					{% if item.small_image_caption_text_3 %}
+						<p>{{ item.small_image_caption_text_3 }}</p>
+					{% endif %}
+				</div>
 			</div>
-			
 		
-		{% endif %}
+		{% endif %}<!-- check chapter -->
 
 	{% endfor %}
 
