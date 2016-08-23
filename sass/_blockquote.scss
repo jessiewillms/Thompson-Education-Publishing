@@ -1,0 +1,18 @@
+/*
+-----------------------------------------------
+Quotes
+-----------------------------------------------
+*/
+blockquote {
+  max-width: 90%;
+  display: block;
+  margin: $padding--large auto;
+  padding: 0 $padding--large;
+
+  color: $blockquote-color;
+  border-left: .25rem solid $color--blue;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

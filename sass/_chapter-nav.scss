@@ -1,0 +1,69 @@
+.nav--modal li/*
+
+-----------------------------------------------
+Chapter navigation
+-----------------------------------------------
+
+*/
+
+.nav--chapter-nav h1,
+.nav--chapter-list {
+	max-width: 50%;
+}
+
+.nav--chapter-nav h1 {
+	
+	float: left;
+}
+
+.nav--chapter-list {
+	float: right;
+}
+.li--current-chapter {
+	color: black;
+}
+.nav--chapter-nav {
+	width: 100%;
+	clear: both;
+	display: inline-block;
+
+	// background: darken($color--dark-grey, 20);
+	
+	h1,
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	
+	h1 {
+		font-size: $font--size-regular;
+		color: black;
+		float: left;
+	}
+	
+	// .nav--chapter-list {
+	// 	float: right;
+		
+	// 	li {
+	// 		float: left;
+	// 	}
+	// }
+}
+
+.modal--pop-up {
+	position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+
+    padding: $padding--extra-large;
+	
+	li {
+		text-align: center;
+		
+	}
+	// background: $color--dark-grey;
+}

@@ -1,0 +1,33 @@
+/*
+
+-----------------------------------------------
+Intro to chapter section
+-----------------------------------------------
+
+*/
+
+.chapter--you-will-learn,
+.chapter--key-focus-sidebar {
+	float: left;
+}
+
+.chapter--header { position: relative; }
+
+.chapter--key-focus { 
+	border-left: 3px solid $color--lighter-grey; 
+	// padding-top: 20px;
+}
+
+.chapter--key-focus ul li { font-size: 18px !important; }
+
+.chapter--sidebar-in-stories {
+	
+	.button--centered {
+		margin-bottom: $padding--extra-large;
+	}
+	
+	p.text--center {
+		margin: 0;
+		display: block;
+	}
+}

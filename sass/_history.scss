@@ -1,0 +1,36 @@
+/*
+
+-----------------------------------------------
+History timeline section
+-----------------------------------------------
+
+*/
+
+.ul--timeline {
+	margin: 0 10px;
+	padding: 0;
+
+	border-left: 1.25px solid $color--light-grey;
+	
+	p.text--bold {
+		display: inline-block;
+		margin-bottom: 15px;
+		font-weight: $text--regular;
+	}
+
+	.li--timeline-item {
+
+		&:before {
+			content: "";
+			
+			display: inline-block;
+		    width: 15px;
+		    height: 15px;
+		    margin: 0 5px 0px -8px;
+		    border-radius: 50%;
+		    border: 1px solid darken($color--light-grey, 5);
+		    background: $color--blue;
+		}
+	}
+
+}

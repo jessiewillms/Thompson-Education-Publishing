@@ -1,0 +1,44 @@
+.grid--full {
+	width: 100%;
+}
+
+.grid--half {
+	width: 50%;
+	float: left;
+}
+
+.grid--third {
+	width: calc(100% / 3);
+	float: right;
+}
+
+.grid--two-third {
+	width: calc( 100% - (100% / 3) );
+	float: left;
+}
+
+.js-accordion-content {
+	position: relative;
+	
+	.grid--full {
+		position: relative;
+		padding: $padding--large 0;
+		background-color: $color--lighter-grey;
+	}
+
+	.grid--two-third {
+		position: relative;
+	}
+	
+	.wrap--caption-text {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: $padding--large;
+
+		p {
+			font-size: 18px;
+			font-family: $text--secondary-font;
+		}
+	}
+}

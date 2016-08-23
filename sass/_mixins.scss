@@ -1,0 +1,61 @@
+/*
+
+-----------------------------------------------
+Mixins
+-----------------------------------------------
+
+*/
+
+
+@mixin transition {
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      transition: all .2s #{$i * .1}s ease-in;
+    }
+  }
+}
+
+li {
+@include transition;
+}
+
+@mixin hover_transition {
+	transition-delay: 0s;
+	transition-duration: 0.15s;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
+}
+
+@mixin vertical-alignment {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50.1%);
+	-ms-transform: translateY(-50.1%);
+	transform: translateY(-50.1%);
+}
+
+
+.filter--greyscale {
+	-webkit-filter: grayscale(.9);
+	filter: grayscale(.9);
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@mixin gradient($from, $to) {
+	background-image: -webkit-gradient(linear,0% 0%,25% 100%,from($from),to($to));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+
+// linear-gradient(to right, rgba(237, 237, 237, 0) 0%, rgba(237, 237, 237, 0.1) 0, #37549f 100%)
+

@@ -6,35 +6,40 @@
 
 */
 
-.tester {
-  border: 2px solid red;
-}
+* { box-sizing: border-box }
 
-html {
+html
+body {
   font-size:   16px;
   line-height: 1.5;
   margin:           0px !important;
 }
 
 
+.cf:before,
 .cf:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.cf { display: inline-block; }
-/* start commented backslash hack \*/
-* html .cf { height: 1%; }
-.cf { display: block; }
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
 
+.cf:after { clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf { *zoom: 1; }
 
 //////////////
 // Misc.
-.hide {
-	display: none
+
+.no-scroll {
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+
+.tester {
+  border: 2px solid red;
 }
 
 .li--no-bullet {

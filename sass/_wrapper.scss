@@ -1,22 +1,57 @@
-.wrapper--outer {
-  width: 100%;
-}
-
-//  -- wrapp--inner: is the inner wrapper, centred
-.wrapper--inner {
-	// max-width: $ipad--landscape;
-	max-width: $ipad--portrait;
-	display: block;
-	margin: 5px auto;
-	border: 1px solid darkblue;
-}
-
 /*
 
-sidebar wrappers
+-----------------------------------------------
+Wrappers
+-----------------------------------------------
 
 */
 
-.chapter--sidebar-history {
+.wrapper--outer {
+  width: 100%;
+  max-width: $ipad--portrait;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid purple;
+
+}
+
+.wrapper--inner {
+	max-width: calc($ipad--portrait - 100px);
+	display: block;
+	margin: 10px auto;
+	padding: 0 10px;
+}
+
+
+.divider {
+	display: block;
+	margin: $padding--extra-large auto !important;
+	// color: blue;
+	height: 9.5px; 
+	width: 175px;
+
+	// -webkit-gradient(linear, 0% 0%, 25% 100%, from(#486ac0), to(#304a8c));
+
+	background: #486ac0;
+	background: -moz-linear-gradient(left, #486ac0 0%, rgba(55,84,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, #486ac0), color-stop(100%, rgba(55,84,159,1)));
+	background: -webkit-linear-gradient(left, #486ac0 0%, rgba(55,84,159,1) 100%);
+	background: -o-linear-gradient(left, #486ac0 0%, rgba(55,84,159,1) 100%);
+	background: -ms-linear-gradient(left, #486ac0 0%, rgba(55,84,159,1) 100%);
+	background: linear-gradient(to right, #486ac0 0%, rgba(55,84,159,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#37549f', GradientType=1 );
+}
+
+aside {
+	// padding: $padding--extra-large;
+	margin-right: -100px;
+	h4 {
+		@include gradient(lighten($color--blue, 15), $color--blue);
+		font-size: $text--base-bigger;
+	}
+}
+
+article {
 	border: 3px solid red;
+	// margin: 0 $padding--extra-large !important;
 }

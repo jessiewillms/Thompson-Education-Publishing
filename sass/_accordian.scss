@@ -1,11 +1,19 @@
+/*
+
+-----------------------------------------------
+Accordion
+-----------------------------------------------
+
+*/
+
 .accordion-toggle {
 	cursor: pointer;
 }
 
-.accordion-content {
+.js-accordion-content {
 	display: none;
 }
 
-.accordion-content.default {
+.js-accordion-content.default {
 	display: block;
 }

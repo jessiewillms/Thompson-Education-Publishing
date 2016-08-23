@@ -1,0 +1,89 @@
+/*
+
+-----------------------------------------------
+Chapter: In Focus
+-----------------------------------------------
+
+*/
+
+.chapter--review-section-inner {
+	padding: $padding--large;
+}
+
+header {
+	
+}
+
+.header--text-wrap {
+  margin: 0 auto;
+  margin-top: -50px;
+  padding-bottom: $padding--extra-large;
+  background: rgba( 255, 255, 255, 0.75);
+  position: relative;
+
+	h2,
+	h3 { 
+    color: $color--blue;
+    padding: 0;
+  }
+}
+
+.header--text-wrap .hexagon-wrap { 
+  position: absolute;
+  right: 25px;
+  top: 0;
+}
+
+.header--text-wrap .hexagon-chapter-number {
+  top: -13px;
+  left: 20px;
+}
+
+.hexagon-wrap {
+	&:before {  
+		  content: "";
+	    position: absolute;
+	    top: 3px;
+	    left: 9px;
+	    z-index: $z--middle;
+	}
+
+  .hexagon-chapter-number {
+    position: absolute;
+    font-family: $text--secondary-font;
+    color: $color--white;
+  }
+}
+
+// positioning is specific to the parent
+.header--text-wrap .small-hexagon {
+  right: -13px; // not variables, specific to header width/height
+  top: -15px; // not variables, specific to header width/height
+}
+// nav .sm-hex in _nav.scss
+
+.small-hexagon {
+  position: relative;
+  width: 25px; 
+  height: 14.43px;
+  background-color: lighten($color--blue, 5);
+  margin: 7.22px 0;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+	border-left: 12.5px solid transparent;
+	border-right: 12.5px solid transparent;
+  }
+  &:before {
+    bottom: 100%;
+    border-bottom: 7.22px solid lighten($color--blue, 5);
+  }
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 7.22px solid lighten($color--blue, 5);
+  }
+}

@@ -1,22 +1,56 @@
+/*
+
+-----------------------------------------------
+Tables
+-----------------------------------------------
+
+*/
+
+tbody {
+    display: block;
+    margin: 0 auto;
+}
+
+tr td:nth-child(1) {
+    max-width: 75px;
+
+}
 table {
     border-top: 1px solid $color--light-grey;
     border-left: 1px solid $color--light-grey;
     border-spacing: 0;
-    margin: 1.875em 0;
-    width: 100%;
+    
+    .table--headline {
+        font-size: $text--base-smallest;
+    }
+    ul {
+        margin-left: 0;
+        padding-left: 20px;
+    }
+    .ul--chart li,
+    .ul--chart p {
+        font-size: $text--base-smallest;
+        font-family: $text--secondary-font;
+    }
+    /*
+        td {
+            width: 768px;
+            calc(768px / 4);
+        }
+    */
+    
+    td,
+    th {
+        // width: 20%;
+        padding: $padding--small;
+        border-right: 1px solid $color--light-grey;
+        border-bottom: 1px solid $color--light-grey;
+        vertical-align: top;
+    }
+
+    tr:nth-of-type(odd) {
+        background: $color--lighter-grey;
+        text-align: left;
+    }
 }
 
-table td,
-table th {
-    padding: 15px;
-    border-right: 1px solid $color--light-grey;
-    border-bottom: 1px solid $color--light-grey;
-    vertical-align: top;
-    font-weight: bold; //$text--bold;
-}
-
-table tr:nth-of-type(odd) {
-    background: #f5f5f5;
-     // lighten($color--light-grey, 3);
-    text-align: left;
-}

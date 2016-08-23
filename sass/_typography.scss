@@ -8,8 +8,130 @@
 
 $text--main-font: "Cormorant", Helvetica, Arial, sans-serif;
 $text--secondary-font: "Open Sans", Helvetica, Arial, sans-serif;
+
 $text--regular: 300;
-$text--bold: 400;
+$text--bold: 700;
+
+$text--base-size: 21px;
+$text--base-smallest: calc( #{$text--base-size} * .75 );
+$text--base-biggest: calc( #{$text--base-size} * 2 );
+$text--base-bigger: calc( #{$text--base-size} * 1.5 );
+
+
+// intro quote 
+
+// h3 {
+//   font-size: $text--base-bigger;
+// }
+
+h3,
+.header--text-wrap h2,
+.header--text-wrap h3 {
+  @include gradient(lighten($color--blue, 15), $color--blue);
+}
+
+h2 .js-hide-em { display: none; }
+.text--chapter-quote {
+  font-size: $text--base-biggest;
+  line-height: 1.15;
+  font-style: italic;
+  font-weight: $text--bold;
+  padding-top: $padding--extra-large;
+  margin: 0;
+
+  @include gradient(lighten($color--blue, .5), $color--blue);
+}
+
+.text--chapter-attr {
+  font-size: $text--base-size;
+  padding-bottom: 25px;
+
+  &:after {
+    content: "";
+    display: block;
+    margin: 20px 0 50px;
+    height: 1spx;
+    background-color: $color--grey;
+  }
+}
+
+.text--byline {
+  padding: $padding--small 0;
+}
+
+// text--
+// 
+.text--italic {
+  font-style: italic;
+}
+.text--large-text {
+  font-size: calc(#{$text--base-size} * 4);
+}
+.text--quote-attribution { font-style: italic; }
+
+.text--center { text-align: center; }
+
+.text--sans-serif { font-family: $text--secondary-font; }
+
+.text--overview-quote {
+  font-size: $text--base-size;
+  color: $color--dark-grey;
+  margin-bottom: $text--base-size;
+}
+
+.text--caption {
+  // font-size: $font--size-smaller;
+  color: $color--grey;
+}
+.text--source {
+  font-size: $font--size-small;
+  padding: $padding--small $padding--large;
+}
+
+.text--bold {
+  font-weight: $text--bold;
+
+  &-red {
+    color: $color--grey;
+    font-size: 17.3px;
+  }
+
+  &-grey {
+    color: $color--grey;
+    font-size: 13px; // 10pt 
+    // font-size: $text--base-bigger;
+  }
+  
+  &-blue {
+    color: $color--blue;
+    font-size: 13px; // 10pt 
+  }
+  
+  &-purple {
+    color: purple; // $color--purple;
+    font-size: 13px; // 10pt 
+  }
+
+}
+
+.text--light-grey {
+  color: $color--lighter-grey;
+}
+
+.text--intro-big-letter {
+  float: left;
+  font-size: 6rem;
+  margin: 0px 2rem;
+  line-height: 120px;
+  font-weight: 800;
+
+  @include gradient(lighten($color--blue, 15), $color--blue);
+}
+
+.wrapper--main-file .text--bold--grey {
+  font-size: $text--base-bigger;
+}
+
 
 /*
 -----------------------------------------------
@@ -18,17 +140,34 @@ Links
 */
 
 a {
-  // color: $link-color;
   text-decoration: none;
+  color: $color--blue;
+  border-bottom: 2px solid $color--blue;
+  margin-bottom: 1px;
 
   strong {
     color: inherit;
   }
 
   &:hover,
-  &:focus {
-    text-decoration: underline;
+  &:focus,
+  &:active {
+    background-color: $color--blue;
+    color: $color--white;
+
+    i {
+      color: $color--white !important;
+    }
   }
+
+  i {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color--white !important;
+    }
+  }
+
 }
 
 /*
@@ -39,54 +178,41 @@ Headings
 
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
-  font-weight:    bold;
-  font-family:    $text--main-font;
+  margin: 0;
+  font-family:    'Cormorant';
   line-height:    1.25;
   text-rendering: optimizeLegibility;
 }
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
+
+// font-weight:    bold;
+
 h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-weight: $text--bold;
 }
+
 h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
-h4, h5, h6 {
-  margin-top: 1rem;
-  font-size: 1rem;
+  font-weight: 300;
 }
 
 p,
 td,
 tr,
 li {
-  font-family: $text--secondary-font;
+  font-family: 'Cormorant';
+  font-size: $text--base-size;
+  line-height: 1.58;
 }
 
-.text--overview-quote {
-  font-size: 30px;
-  line-height: 30px;
+p + p {
+  margin-top: $text--base-size;
+}
+
+.background--span-color {
+  padding: 0 8px;
+  display: inline-block;
+  background: $color--lighter-grey;
   color: $color--dark-grey;
-}
-
-.text--source {
-  
-}
-.text--bold {
-  font-weight: bold;// $text--bold;
-
-  &-red {
-    color: red;
-  }
-  &-grey {
-    color: grey;
-  }
 }
 /*
 -----------------------------------------------
@@ -96,16 +222,14 @@ Body text
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 }
 
 .text--big-letter {
 	font-size: 30px;
 }
 
-strong {
-  color: $strong-color;
-}
+// strong { color: $strong-color; }
 
 
 /*
@@ -120,17 +244,27 @@ ul, ol, dl {
 }
 
 /*
+
+List items
+
+*/
+
+.li--no-bullet {
+  list-style-type: none;
+}
+
+li.li--active {
+  background-color: $color--lighter-grey;
+}
+
+
+/*
 -----------------------------------------------
-Quotes
+Font Awesome
 -----------------------------------------------
 */
-blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: $blockquote-color;
-  border-left: .25rem solid $blockquote-border-color;
 
-  p:last-child {
-    margin-bottom: 0;
-  }
+.fa-arrow-right {
+  font-size: $text--base-smallest !important;
 }
+

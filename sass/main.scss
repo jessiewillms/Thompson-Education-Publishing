@@ -9,13 +9,34 @@ Table of contents:
 6. Wrappers
 7. Misc.
 8. Footer
+
 */
 
+@import 'js-handles';
+@import 'animation';
+@import 'colors';
 @import 'settings';
-@import 'typography';
-@import 'main-css';
-@import 'wrapper';
+@import 'default';
 @import 'mixins';
+@import 'typography';
+
+@import 'grids';
+@import 'wrapper';
+@import 'images';
+
+@import 'blockquote';
+@import 'chapter-header';
+
 @import 'accordian';
 @import 'table';
+@import 'chapter-nav';
 @import 'nav';
+
+@import 'misc-css';
+
+// section-specific files
+// 
+@import 'in-focus';
+@import 'history';
+@import 'chapter--sidebar-in-stories';
+@import 'social-worker-practitioner';
