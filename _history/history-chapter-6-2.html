@@ -1,0 +1,130 @@
+---
+
+title: Debating the Future of Health Care in Canada
+category_long: ""
+category: sidebar-history
+
+history_chapter: 6
+chapter_part: 2
+
+small_image: /assets/chapters/6/photos/563279.jpg
+small_image_caption_name: The Health Council of Canada
+
+small_image_caption_text_1: In 2014, Roy Romanow, former NDP premier of Saskatchewan and one-time chair of the Royal Commission on the Future of Health Care, lamented the end of the Health Council of Canada and the 10-year health accord that led to its creation.
+
+small_image_caption_text_2: “It’s a blow to nation-building because it’s a blow to one of our revered, if not most revered, social programs, which is medicare,” commented Romanow. 
+
+small_image_caption_text_3: The 2004 accord was intended to enact reforms and set national standards in areas such as primary care, wait lists, and electronic health records, with the council acting as watchdog.
+
+large_image:
+large_image_caption_name: 
+
+large_image_caption_text: 
+
+large_image_caption_text_2:
+
+---
+
+<section class="wrapper--inner wrapper--main-file cf">
+
+<p>In 2001, Allan Rock, the federal Minister of Health, announced the formation of the Royal Commission on the Future of Health Care in Canada, under the leadership of Roy Romanow. Its mandate was to engage Canadians in a national dialogue on the future of health care and to make recommendations to preserve the long-term sustainability of Canada&rsquo;s universally accessible, publicly funded health-care system.</p>
+
+<p>The Romanow report has been the backdrop for the major debates and disagreements between the federal and provincial governments over health care in recent years.</p>
+
+<p class="text--bold span-keyword text--grey-bold" id="kc-5">The Romanow Commission</p>
+
+<p>The final report of the <span class="text--bold text--bold--red">Romanow Commission</span> was released in 2002. In his work, Romanow said he was guided by two things: Canadian values of fairness, equity, and solidarity; and by the evidence. This approach led him to recommend expanding public, not-for-profit <span class="text--bold span-keyword" id="kc-6">medicare</span> to include home care and pharmacare, and to introduce a genuine system of primary health care. &ldquo;In the coming months, the choices we make, or the consequences of those we fail to make,&rdquo; declared Romanow in his final report, &ldquo;will decide medicare&rsquo;s future. I believe Canadians are prepared to embark on the journey together and build on the proud legacy they have inherited&rdquo; (Romanow 2002, 247).</p>
+
+<p>The Commission&rsquo;s final report, <em>Building on Values: The Future of Health Care in Canada,</em> comprises 47 detailed, costed recommendations. Romanow &lsquo;s recommendations were premised on three main themes: (1) strong leadership is needed to maintain Medicare, (2) the system should become more efficient and responsive, and (3) both short-term and long-term strategies are needed to maintain universal health care. The Commission&rsquo;s report also addressed such diverse issues as Aboriginal health care, culturally sensitive access to health care, and the impact of globalization and applied research on the health of Canadians.</p>
+
+<p class="text--bold text--bold-grey">Medicare Under the Microscope</p>
+
+<p>Canadians are justifiably proud of the health care system that they have inherited and, by any standards, the system is unique. It is &ldquo;universal&rdquo; insofar as it covers all &ldquo;medically necessary services.&rdquo; Doctors cannot charge individual Canadians for such services, nor are there any private hospitals. Undoubtably, this is what provides Canadians with a sense of personal security and even pride. But just what is &ldquo;medically necessary&rdquo; is unclear. For example, special services (e.g., MRIs, certain blood tests), dental care, drugs required outside the hospital setting, and long-term care&mdash;all medically necessary&mdash;typically involve a fee.</p>
+
+<p>Critics of the current system want to increase the private, for-profit component. They want to bring Canadian health care more in line with other models, such as the National Health Service in Britain. They argue that a &ldquo;two-tier system,&rdquo; with private and public medicine offered side by side, will make the system more cost-efficient and provide more medical choices for consumers. There is no such thing as &ldquo;free&rdquo; health care, they argue, it is just a question of who pays.</p>
+
+<p> The system&rsquo;s supporters, on the other hand, argue against a two-tier system. If anything, they insist, what is needed are renewed efforts to defend and even extend the system&mdash;to include more &ldquo;medically necessary&rdquo; procedures, not fewer&mdash;and to make it more cost-efficient and more equitable for Canadian citizens.</p>
+
+<p>This debate over the future of health care occurs in real time&mdash;major groups align themselves on one side or the other. Who will win out? Time will tell, but the stakes are certainly high.</p>
+
+</section>
+
+<!-- The Five Principles of Medicare 6.1 -->
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 6 and item.chapter_part == 1 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--inner wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+						
+						</div>
+					</section>
+
+				</div>
+
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}

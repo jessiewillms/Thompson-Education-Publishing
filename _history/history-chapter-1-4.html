@@ -1,0 +1,141 @@
+---
+
+title: What Do Social Workers Do?
+category: sidebar-history
+category_long: ""
+
+history_chapter: 1
+chapter_part: 4
+
+small_image: /assets/chapters/1/photos/shutterstock_247411303.jpg
+
+small_image_caption_name: 
+
+small_image_caption_text_1: Social workers provide support and guidance for people confronted with unforeseen events, such as accidents or illness, or with crises, such as sudden unemployment or homelessness.
+
+small_image_caption_text_2:
+
+small_image_caption_text_3:
+
+large_image: /assets/chapters/1/photos/Cuffed_WDC7448.jpg
+large_image_caption_name:
+
+large_image_caption_text: Social workers in the field of corrections are increasingly in demand, due in part to a shift in focus to the mental and physical health care needs of persons who are in conflict with the law.
+
+large_image_caption_text_2:
+
+---
+
+<section class="wrapper--inner wrapper--main-file cf">
+
+	<p>Those who choose social work as their profession are typically motivated by humanitarian and egalitarian values, and by a desire to understand how society works and to make it better for everyone. Whatever the combination of factors that leads a person into the profession, social work demands more than just the desire to “do good.” The practitioner needs to have the analytical and hands-on skills, as well as the maturity and personal stability, that will allow her or him to bring about effective change.</p>
+
+	<p>In 2005, the Canadian Association of Social Workers (CASW) formulated a new Code of Ethics, replacing the 1994 code, and added a separate document entitledGuidelines for Ethical Practice. The Code’s preamble defines social work practice as follows:</p>
+	
+	<p><em>The social work profession is dedicated to the welfare and self-realization of all people; the development and disciplined use of scientific and professional knowledge; the development of resources and skills to meet individual, group, national, and international changing needs and aspirations; and the achievement of social justice for all. The profession has a particular interest in the needs and empowerment of people who are vulnerable, oppressed, and/or living in poverty. Social workers are committed to human rights as enshrined in Canadian law, as well as in international conventions on human rights created or supported by the United Nations.</em></p>
+
+	<p>Over the past few years, the number of social workers has risen sharply. This rise is primarily attributable to the much greater range and intensity of social service needs, such as unstable family structures, family violence, child poverty, the aging of the population and the switch to home care, stress, substance use, dropping out of school, behavioural problems, and traumatic events. The fact that a growing proportion of these needs are handled by members of other occupations has only slightly slowed employment growth in this occupation. We will most likely see this trend continue over the next few years.</p>
+
+	<p class="text--bold text--bold-red ">Direct and Indirect Social Work</p>
+
+	<p>It is common to distinguish between two types of social work.</p>
+	
+	<ul class="ul--list">
+		<li class="li--bullet-item"><span class="span-keyword text--red">Direct social work</span> involves working face-to-face with people as individuals to provide services such as counselling, group work, and community development. This is typically done through a public (or publicly-funded) social service agency or institution, such as a hospital or child welfare agency.</li>
+		<li class="li--bullet-item"><span class="span-keyword text--red">Indirect social work</span> involves working with organizations that formulate, analyze, develop, and evaluate social policies and programs. It typically means working with social service agencies, research groups, and other groups whose purpose is to advocate for those in need.</li>
+	</ul>
+
+	<p>The different kinds of practice can also be described as being either micro, mezzo, or macro social work.</p>
+
+	<ul class="ul--list">
+		<li class="li--bullet-item">Micro social work refers to direct practice with individuals and families.</li>
+		<li class="li--bullet-item">Mezzo social work is social work with groups and communities.</li>
+		<li class="li--bullet-item">Macro social work involves working with organizations or communities to improve or change laws or policies in general society.</li>
+	</ul>
+
+	<p>Whether involved directly with citizens or indirectly through research, social workers are above all committed to serving people who are vulnerable or in need. They are there when circumstances are challenging or go wrong, or when people need help.</p>
+	<p class="text--bold text--bold-red">Casework and Beyond</p>
+
+	<p>The traditional notion of the social worker is that of a <span class="span-keyword text--red">caseworker</span>—a practitioner doing one-on-one counselling with individuals or families, usually working as part of a social service agency. Casework is what social workers are so highly respected for in the public eye. It is what social workers do ”on the ground,” every day; they become intimately involved, one-on-one, with many diverse populations, including the homeless, older adults, women, children and youth, LGBTQ+ persons, and persons with disabilities. They work in many different employment settings—in child welfare and family service agencies, schools, mental health clinics and hospitals, child guidance centres, industrial and labour organizations, and criminal justice settings. They bring a broad range of background knowledge and experience to help individuals and families in need.</p>
+
+	<p>Casework, then, involves doing rigorous and indispensible practical work with individuals and families, often in extremely difficult circumstances. Underlying this work is a body of theoretical knowledge and “best practices” that social work practitioners can call upon to help determine the best course of action. Because they have a deeper grasp of complex social issues and social problems, more often than not social workers also find themselves involved in advocacy, policy research, and even social movements.</p>
+
+</section>
+
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 1 and item.chapter_part == 1 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--inner wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+						
+						</div>
+					</section>
+
+				</div>
+
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}

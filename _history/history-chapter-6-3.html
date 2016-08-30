@@ -1,0 +1,193 @@
+---
+
+title: An Overview of Health Expenditure Trends
+
+category: sidebar-history
+
+category_long: ""
+
+history_chapter: 6
+chapter_part: 3
+
+small_image: /assets/chapters/6/photos/care-worker-with-child.jpg
+
+small_image_caption_name: 
+
+small_image_caption_text_1: Average salaries of physicians in Canada in 2015 ranged from $263,000 in Nova Scotia to $368,000 in Ontario. (Canadian Institute for Health Information, 2015)
+
+small_image_caption_text_2:
+
+small_image_caption_text_3:
+
+large_image:
+large_image_caption_name: 
+
+large_image_caption_text:
+large_image_caption_text_2:
+
+chart_1: /assets/chapters/6/charts/ch_06_pg_160.jpg
+chart_1_src: 
+
+chart_2: /assets/chapters/6/charts/ch_06_pg_161.jpg
+chart_2_src:
+
+chart_3:
+
+---
+<section class="wrapper--inner wrapper--main-file cf">
+
+
+<p>Both the public and the private sectors contribute to the financing of Canada&rsquo;s health system (see Figure 6.1). Public-sector funding includes payments by governments at the federal, provincial/territorial, and municipal levels and by workers&rsquo; compensation boards and other social security schemes. Private-sector funding consists primarily of health expenditures by households and private insurance firms.</p>
+
+<p class="text--bold text--bold-grey">Total Health Expenditure in Canada</p>
+
+<p>The latest data available put health spending in Canada at approximately $214.9 billion or $6,045 per Canadian (2014). The rate of growth in health spending (2.1 percent in 2014) continues to be less than inflation and population growth combined. Health spending decreased by an average 0.4 percent per year in the previous four years after adjusting for these factors.</p>
+
+<p>Since the start of the global economic recession in 2008, the ratio of health spending to GDP has stabilized or fallen in most OECD countries. A new period of slower growth is emerging. It reflects, in large part, Canada&rsquo;s modest economic growth and fiscal restraint as governments focus on balancing budgetary deficits. Health expenditure, on average, accounts for about 40 percent of provincial/territorial government budgets. Hospitals (29.6 percent), drugs (15.8 percent), and physician services (15.5 percent) continue to account for the largest shares of health dollars (more than 60 percent of total health spending).</p>
+
+<p>While Canadians aged 65 and over account for less than 15 percent of the Canadian population, they consume more than 45 percent of all public-sector health dollars spent.</p>
+
+{% for item in site.history %}
+	
+	{% if item.chart_1 %}
+	<aside class="aside--chart cf">
+		<div class="grid--full cf">
+			
+			{% if item.chart_1_src %}
+				<!-- if there's a chart + attr, make 2/3 -->
+				<div class="grid--two-third">
+					<img src="{{ item.chart_1 }}" data-action="zoom">
+				</div>
+				
+				<div class="grid--third">
+					<footer>
+						<p class="text--source">{{ item.chart_1_src }}</p>
+					</footer>
+				</div>
+			
+			{% else %}
+				<!-- no attr, make full -->
+				<img src="{{ item.chart_1 }}" data-action="zoom">
+			{% endif %}
+		
+		</div>
+	</aside>
+	{% endif %}
+
+{% endfor %}	
+
+<p class="text--bold text--bold-grey">Provincial and International Variations</p>
+
+<p>Health spending per person varies among provinces and territories. Total health spending per person is highest in Newfoundland and Labrador ($6,953) and Alberta ($6,783) and lowest in Qu&eacute;bec ($5,616) and British Columbia ($5,865). The amount spent per person reflects the population of each province and territory and its health-care needs, as well as the organization of health services, personnel compensation, and the sharing of costs between public and private sectors. Per person spending on health might be expected to be higher in the territories due to their small, dispersed populations. Hospitals (29.6 percent), drugs (15.8 percent) and physician services (15.5 percent) continue to account for the largest shares of health dollars (more than 60 percent of total health spending). Although spending continues to grow in all three categories, the pace has slowed in recent years.</p>
+
+{% for item in site.history %}
+	
+	{% if item.chart_2 %}
+	<aside class="aside--chart cf">
+		<div class="grid--full cf">
+			
+			{% if item.chart_2_src %}
+				<!-- if there's a chart + attr, make 2/3 -->
+				<div class="grid--two-third">
+					<img src="{{ item.chart_2 }}" data-action="zoom">
+				</div>
+				
+				<div class="grid--third">
+					<footer>
+						<p class="text--source">{{ item.chart_2_src }}</p>
+					</footer>
+				</div>
+			
+			{% else %}
+				<!-- no attr, make full -->
+				<img src="{{ item.chart_2 }}" data-action="zoom">
+			{% endif %}
+		
+		</div>
+	</aside>
+	{% endif %}
+
+{% endfor %}	
+
+<p>Among 30 countries that had comparable accounting systems in the OECD in 2012, the latest year for which data are available, spending per person on health care remained highest in the United States (US$8,745). Canada was in the top quartile of countries in terms of per person spending on health, with spending at US$4,602, which was similar to several other OECD countries, including Germany (US$4,811), Denmark (US$4,698), and Luxembourg (US$4,578).</p>
+
+
+</section>
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 6 and item.chapter_part == 2 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }}</h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+
+						</div>
+					</section>
+					
+
+				</div>
+			
+
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}

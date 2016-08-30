@@ -1,0 +1,301 @@
+---
+
+title: The Advantages of a Public Health-Care System
+
+category: sidebar-history
+category_long:
+
+history_chapter: 6
+chapter_part: 4
+
+small_image: /assets/chapters/6/photos/terry-lake.jpg
+small_image_caption_name: Health-Care Spending
+
+small_image_caption_text_1: “You can’t talk about health care without talking about money,” Terry Lake, B.C.’s health minister (shown here) remarked during discussions between provincial and territorial health ministers and the federal government in early 2016.
+
+small_image_caption_text_2: Today, Ottawa covers about 22 percent of publicly funded health care ($34 billion of $155 billion).
+
+small_image_caption_text_3: The provinces and territories want Ottawa to increase that amount to 25 percent of their health budgets. They also want to revisit equalization to ensure fairness across the country.
+
+large_image: 
+large_image_caption_name: 
+
+large_image_caption_text: 
+large_image_caption_text_2: 
+
+---
+
+<section class="wrapper--inner wrapper--main-file cf">
+
+<p>In reality, &ldquo;free&rdquo; health care does not exist anywhere; it is a question of who pays how much, and for what services. However, the case for some form of publicly funded health care is accepted by most countries in the world. Apart from being an effective delivery method, public medicare has important advantages over a private health care system.</p>
+
+	<ul class="ul--list">
+		<li class="li--bullet-item">First, public financing spreads the cost of health care across society, rather than only to those who are unfortunate or sick.</li>
+
+		<li class="li--bullet-item">Second, financing health insurance through taxation is efficient, since it does not require the creation of a separate collection process.</li>
+
+		<li class="li--bullet-item">Third, medicare encourages Canadians to seek preventive care services and to treat problems before they worsen and treatment becomes more costly.</li>
+
+		<li class="li--bullet-item">Fourth, the government can cut costs, as it is largely a single buyer of health care supplies and services.</li>
+	</ul>
+
+<p>Many Canadian businesses also recognize and support Canada&rsquo;s universal medicare system. Lower employee benefit costs and a healthy and mobile workforce are competitive advantages. Also, the portability principle of medicare ensures that workers can move from province to province and still be covered by health insurance. Provincial governments have also begun to address preventive medicine and community-based care.</p>
+
+<p class="text--bold text--bold-grey">Public vs. Private Health Care</p>
+
+<p>Nevertheless, public health care in Canada is not entirely secure. An aging population and ever-spiralling costs will require defenders of universal care to be even more alert. Some of the potential dangers are indicated below.</p>
+
+<li class="li--bullet"><span class="text--bold text--bold--grey background--span-color">Universality.</span> One of the biggest threats to our public system of health care is the current movement to privatize care in some provinces, particularly in Alberta and Ontario. Saskatchewan recently passed legislation that allows patients to pay privately for MRIs. Qu&eacute;bec also introduced legislation that will allow physicians to bill for a range of &ldquo;ancillary&rdquo; products and services, ranging from eye drops to colonoscopies. Several trends indicate increased <span class="text--bold text--red">privatization</span> in our health care system:</li>
+
+	<ul class="ul--sub-list">
+		<li class="li--bullet li--sub-list-item">the &ldquo;de-listing&rdquo; of services covered by medicare (e.g., specific medical procedures, support services, and drugs)</li>
+
+		<li class="li--bullet li--sub-list-item">the transferring of care out of areas covered by medicare (e.g., acute care in hospitals) to areas that are not (e.g., home care)</li>
+
+		<li class="li--bullet li--sub-list-item">the contracting out of &ldquo;non-core&rdquo; medical services (laboratories, ambulances, and rehabilitation services) to private firms</li>
+	</ul>
+
+<li class="li--bullet"><span class="text--bold text--bold--grey background--span-color">Comprehensiveness. </span> Some provinces have attempted to reduce costs by reducing comprehensiveness&mdash;that is, the range of what are considered to be &ldquo;medically necessary&rdquo; services. Because the Canada Health Act states that the provinces should determine which services are &ldquo;medically necessary,&rdquo; there is some room for provinces to limit that range.</li>
+
+<li class="li--bullet"><span class="text--bold text--bold--grey background--span-color">Contracting out.</span> There are also concerns regarding the administration of hospitals. Governments are <span class="text--bold text--red">contracting out</span> the management of some hospitals to private companies. Also, some services, such as catering, laundry, and cleaning, have been contracted out to private, for-profit organizations.</p>
+
+</section>
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 6 and item.chapter_part == 2 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+
+						</div>
+					</section>
+				</div>
+				
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}
+
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 6 and item.chapter_part == 3 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+
+						</div>
+					</section>
+				</div>
+				
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}
+
+<!-- Ethnic Differences in Health -->
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 6 and item.chapter_part == 4 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+
+						</div>
+						
+					</section>
+					
+					
+
+				</div>
+				
+			
+				
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}

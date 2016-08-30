@@ -1,0 +1,476 @@
+---
+
+title: The Education and Employment of Social Workers
+category: sidebar-history
+category_long: ""
+
+history_chapter: 1
+chapter_part: 5
+
+small_image:
+
+small_image_caption_name: 
+
+small_image_caption_text_1:
+
+small_image_caption_text_2:
+
+small_image_caption_text_3:
+
+large_image:
+large_image_caption_name:
+
+large_image_caption_text:
+
+large_image_caption_text_2:
+
+---
+
+<aside class="chapter--main-aside cf">
+	<img src="/assets/chapters/1/photos/03719059.jpg" alt="">
+
+	<p class="text--purple">Employment Statistics for Social Workers*</p>
+
+	<table>
+	<tbody>
+	    <p class="text--smaller text--bold">Employment by Gender</p>
+	    <tr>
+	      <td>Males</td>
+	      <td>15.5% (51.9%)</td>
+	    </tr>
+	    <tr>
+	      <td>Females</td>
+	      <td>84.5% (48.1%)</td>
+	    </tr>
+	</tbody>
+	</table>
+	<!--  -->
+	<table>
+	<tbody> 
+	    <p class="text--smaller text--bold">Employment by Age</p>
+	    <tr>
+	    	<td>25–44</td>
+	    	<td>64.5% (42.7%)</td>
+	    </tr>
+	    <tr>
+	    	<td>45–64</td>
+	    	<td>32.1% (41.1%)</td>
+	    </tr>
+	    <tr>
+	    	<td>65+</td>
+	    	<td>0.9% (2.8%)</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<table>
+	<tbody> 
+	    <p class="text--smaller text--bold">Employment Status</p>
+	    <tr>
+	    	<td>Full time</td>
+	    	<td>84.4% (81.2%)</td>
+	    </tr>
+	    <tr>
+	    	<td>Part time</td>
+	    	<td>15.6% (18.8%)</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<table>
+	<tbody> 
+	    <p class="text--smaller text--bold">Average annual Income</p>
+	    <tr>
+	    	<td>Annual</td>
+	    	<td>$52,000 ($50,300)</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<p class="text--smaller">Generally starts at about $30,000 a year and can increase to about $90,000 for more senior professionals in supervisory positions.</p>
+
+	<p class="text--smaller">*Figures in parentheses reflect statistics for the entire Canadian labour force.</p>
+
+
+	<footer>
+		
+		<p class="text--source"><em>Source:</em> Statistics Canada. (2011). National Household Survey (NHS). Ottawa: Statistics Canada.</p>
+
+	</footer>
+</aside>
+
+<section class="wrapper--inner wrapper--main-file cf">
+
+	<p>Whatever type of work is pursued, some post-secondary education is required in order to practise in the field of social work. In general, a university-trained person is referred to as a “social worker,” whereas a community college-trained individual is called a “social service worker.” In some provinces and in everyday contexts, this distinction is often ignored, although obviously university-trained individuals will have more years of training behind them.</p>
+
+	<p>The first trained Canadian social workers graduated from the University of Toronto’s Department of Social Services in 1914. Until the early 1970s, social work schools in Canada were accredited by the American Council of Social Work Education. There are now thirty-five universities offering social work degrees and forty-six community colleges offering diplomas, which are accredited by the Canadian Association of Social Work Educators (CASWE). A Bachelor of Social Work (B.S.W.) degree normally requires four years of university study. At least one additional year of graduate study is required for the Master of Social Work (M.S.W.) degree. A Diploma in Social Service Work from a community college requires at least two years of training. Those holding a non-social work undergraduate degree normally must complete two years of study for a Master of Social Work degree. There are currently twenty-nine M.S.W. programs offered in Canada.</p>
+
+	<p>Post-graduate study leading to a doctoral degree in social work is normally pursued by those who wish to teach at a university or those involved in high-level research, social policy, or large-scale administration. Eleven Canadian universities offer Ph.D.s in social work: Memorial University of Newfoundland, McGill University, University of Ottawa, University of Toronto, York University, McMaster University, Wilfrid Laurier University, University of Windsor, University of Manitoba, University of Calgary, and University of British Columbia.</p>
+
+	
+	<p class="text--bold text--bold-grey">Employment Opportunities in Social Work</p>
+
+	<p>The career opportunities for qualified social workers today are quite diverse, ranging from various public institutions to private practice and occurring within many different fields of&#160;experience.</p>
+
+	<ul class="ul--list">
+		<li class="li--bullet-item"><span class="text--bold text--bold-grey">Health and social services.</span> Job settings in this area include family and child welfare agencies, hospitals and other health care facilities, group homes and hostels, substance use treatment facilities, and Social Assistance offices.</li>
+		<li class="li--bullet-item"><span class="text--bold text--bold-grey">Government services.</span> A large number of social workers work directly for some level of government, although this setting is declining as more and more services are devolved to community agencies. These services include statutory services such as child welfare or probation (in some jurisdictions), planning and administration of programs, correctional facilities, and the justice system.</li>
+		<li class="li--bullet-item"><span class="text--bold text--bold-grey">Communities. </span>Community organizers work out of community health centres, resource centres, and other grassroots organizations to provide counselling and support to local&#160;communities.</li>
+		<li class="li--bullet-item"><span class="text--bold text--bold-grey">Research. </span>The federal, provincial/territorial, and local governments frequently call upon social workers to conduct surveys and carry out research that affects social work practice in various settings.</li>
+		<li class="li--bullet-item"><span class="text--bold text--bold-grey">Self-employment. </span>A small but growing number of social workers are self-employed, operating out of private offices and offering services directly to the public for per-session fees, or contracting out their services to large organizations.</li>
+	</ul>
+
+</section>
+
+
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 1 and item.chapter_part == 2 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--inner wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+						
+						</div>
+					</section>
+
+				</div>
+
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 1 and item.chapter_part == 3 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--inner wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+						
+						</div>
+					</section>
+
+				</div>
+
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}
+
+<section class="wrapper--inner wrapper-main-file cf">
+	<p class="text--bold text--bold-red">Balancing Ethical Responsibilities in Social Work</p>
+		
+		<p>The Canadian Association of Social Workers (CASW) Code of Ethics (2005) and the companion document Guidelines for Ethical Practice provide guidance on ethical practice in social work. The Code of Ethics outlines six key values: (1) respect for the inherent dignity and worth of persons; (2) pursuit of social justice; (3) service to humanity; (4) integrity of professional practice; (5) confidentiality in professional practice; and (6) competence in professional practice. To clarify the interpretation and application of these values, the Guidelines outline in further detail the ethical responsibilities related to clients, colleagues, the profession, and society, plus ethical conduct in the workplace, in private practice, and in research settings.</p>
+		
+		<p>Social workers must occasionally balance urgent and practical intervention measures with ethical or “political” considerations. In many cases the code of ethics and agency policy align. However, sometimes social workers confront situations in which the policy and regulations of the agency conflict with what they, as experienced social workers, see as being in the best interests of their client. As well, the standards and ethics of the profession may be inconsistent with the established procedures and practices of a particular agency. Balancing one’s beliefs, professional standards, and agency rules can be difficult. In this context, the social worker’s place of employment can be either a source of empowerment or a source of strain.</p>
+
+</section>
+
+	<aside class="chapter--main-aside cf">
+		<img src="/assets/chapters/1/photos/shutterstock_193821503.jpg" alt="">
+
+
+		<div class="wrapper--caption-text">
+			<h3 class="text--bold text--purple">Virtue-Based Ethics</h3>
+			<p class="text--caption">Virtue-based ethics takes the stance that social workers are motivated to be virtuous and caring because they believe it is the right thing to do. In accordance with this approach, the following five questions may help in ethical decision making:</p>
+
+			<ul class="text--caption">
+				<li class="text--caption">What are my feelings and intuition telling me to do?</li>
+				<li class="text--caption">How can my values inform my decision? Will they hinder or help?</li>
+				<li class="text--caption">How will other people be affected by my decision?</li>
+				<li class="text--caption">How would I feel if this decision was made public?</li>
+				<li class="text--caption">What decision would best define who I am as a person?</li>
+			</ul>
+		</div>
+	</aside>
+
+<section class="wrapper--inner wrapper--main-file cf">
+	
+		<p class="text--bold text--bold-red ">Ethical Decision Making Related to Social Work</p>
+		
+		<p>Ethical dilemmas often arise, for example, in income support and child welfare cases. Based on their assessment, social workers often refer clients to particular services for which they qualify. However, part of the mandate of social welfare organizations is to spend public money wisely. Therefore, social workers must ensure that the client is genuinely in need and eligible for assistance, while representing the client’s interests as fairly as possible. Striking a balance is often easier said than done. Similarly, in child welfare cases (where a child welfare worker is expected to act in the best interests of the child), the social worker may be criticized for leaving a child in a home or for taking the child away from a family prematurely. Such dilemmas are aggravated when large caseloads or tight budgets make it difficult for social workers to provide services in ways that are consistent with their professional and personal beliefs.</p>
+		
+		<p>Social workers confront ethical issues on a daily basis. For example, a client may present a gift to show their appreciation. Or, they may disclose something that is questionable under the law. A social worker may be legally obliged to pursue a course of action (e.g., with respect to privacy and access to information). Here is a five-step process for ethical decision making:</p>
+		
+		<ul class="ul--list">
+			
+			<li class="li--bullet-item">(1) Identify the key ethical issues in the situation.</li>
+
+			<li class="li--bullet-item">(2) Identify the relevant ethical guidelines within your province’s or territory’s social work code of ethics or any employer-based ethical guidelines.</li>
+
+			<li class="li--bullet-item">(3) Identify which ethical principles are of major importance in this particular situation and which are not. This is the rational and straightforward part of the process.</li>
+
+			<li class="li--bullet-item">(4) Acknowledge and examine your own emotions and values. This is where virtue-based ethical decision making may be helpful.</li>
+
+			<li class="li--bullet-item">(5) Outline an action plan that is appropriate for the situation at hand.</li>
+
+			<li class="li--bullet-item">Ethical decision making becomes easier when social workers consult with colleagues, supervisors, or professional associations for assistance and support in working through the dilemma.</li>
+		
+		</ul>
+</section>
+
+
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 1 and item.chapter_part == 4 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--inner wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+						
+						</div>
+					</section>
+
+				</div>
+
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}
+
+<section class="wrapper--inner wrapper--main-file cf">
+		
+		<p class="text--bold text--bold-red">Factors Affecting Practitioner Well-Being</p>
+
+		<p>Individuals are attracted to social work for many different reasons. Some are motivated by altruism—a desire to do good for others—often associated with personal experiences (positive or negative). Others are guided by professional or political motivations. Some wish to work in a field where they can advocate for the rights of marginalized individuals and groups.</p>
+
+		<p>Unfortunately, the increasing emphasis on managerialism (or what might be called “the social control” aspect of social work) means that many social work practitioners experience a mismatch between initial good intentions and real-life experience. Stevens et al. (2012) proposed that this “mismatch that may be one factor leading to the high stress and burnout levels found in social workers” (p. 33). Carey (2008) found that although employment opportunities remained good for social workers, “morale among the majority of employees was poor” (p.&#160;90). He stated that “there was also a feeling among staff that social work was becoming devalued as a profession, and respondents identified a stronger sense of job insecurity and loss of autonomy (particularly when working with other professionals)” (p. 90).</p>
+
+		<p>A study of 175 social workers employed by the Children’s Aid Society of Toronto in 2004 revealed that 82.7 percent of workers reported that they had been exposed to at least one critical incident at work (including the death of a client, threats, or assault). Seventy percent reported experiencing stress as a result of a critical incident.</p>
+
+</section>
+	<aside class="chapter--main-aside cf">
+
+		<div class="wrapper--caption-text">
+			<h3 class="text--bold text--bold-purple">Signs and Symptoms of Stress</h3>
+			<p class="text--caption">Signs and symptoms of stress or trauma among child welfare workers include:</p>
+
+			<ul class="ul--list">
+				<li class="li--bullet-item text--smaller">intrusion symptoms, such as recurrent dreams and repetitive thoughts;</li>
+				<li class="li--bullet-item text--smaller">avoidance symptoms, including social isolation and avoidance of high-stress situations; and</li>
+				<li class="li--bullet-item text--smaller">arousal symptoms, such as anxiety and irritability.</li>
+			</ul>
+
+			<footer>
+				
+				<p class="text--source"><em>Source:</em> Lambert, L. and Regehr, C. (2005). Stress, Trauma, and Support in Child Welfare Practice. Research Institute for Evidence-Based Social Work. Children’s Aid Society of Toronto. University of Toronto.</p>
+
+			</footer>
+		</div>
+	</aside>
+<section class="wrapper--inner wrapper--main-file cf">
+
+		<p class="text--bold text--bold-red ">A Potentially Rewarding Career</p>
+
+		<p>Other studies have found higher levels of job satisfaction. Rural and remote northern practice in Canada has long been a starting point for many social work professionals. Although they may be recruited to the North for job opportunities, many (although not all) decide to stay because of job satisfaction.</p>
+
+		<p>Graham and colleagues (2012) note that challenges of social practice in the North include isolation, personal-professional conflicts, or practice training that conflicts with Indigenous ways of knowing. In his study of 91 social workers in the Northwest Territories and northwestern Ontario, he found general satisfaction with their work and professional roles. Interestingly, working in child welfare (typically associated with high stress levels in southern, urban centres) was found to be a predictor of satisfaction with work and profession in the north. The authors suggested that “community size creates a context which might determine or impact key socio-cultural and socio-political interactions within the social environment, which then in turn impacts practitioner well-being.”</p>
+
+		<p>It is sometimes argued that social workers must try to “desensitize” themselves when they work in the child welfare field. Of course, in practice this is nearly impossible. To do their jobs effectively, social workers must be sensitive to the needs and feelings of the children and families with whom they are involved. This level of commitment and engagement may be the key to their success in this difficult area of practice.</p>
+
+		<p>One way to offset stress and enhance job satisfaction is to engage in professional development activities among colleagues, especially those from different regions of the country. The feeling of being part of a large and diverse community of gifted professionals, which comes from attending conferences, workshops, and webinars where ideas are exchanged and effective practice strategies are shared, can be energizing. The ongoing learning and friendships that emerge from collegial interactions can help sustain one’s dedication to the job.</p>
+
+		<p class="text--bold text--bold-red ">Self-Care</p>
+
+		<p>Social work is a noble profession to be sure, but a disconcerting phenomenon in this field has received considerable attention—the extent of worker burnout among dedicated social workers. As “burnout” can happen to anyone in a stressful occupation, it may be more accurate in the social work context to refer to such a phenomenon as “vicarious trauma” or “compassion fatigue.”</p>
+
+		<p>The term<span class="span-keyword text--red"> “compassion fatigue”</span> refers to the anxiety resulting from dealing with emotionally difficult cases under increased workplace pressure and increased workloads. This type of stress occurs among social workers and others who are faced with increasing responsibility and less and less control over how the work is to be completed.</p>
+
+		<p><span class="span-keyword text--red">Self-care </span>is an important and integral part of the profession of social work. There are multiple ways to practice self-care; however, the ABC mnemonic is an easy way to remember the steps necessary toward effective self-care practices:</p>
+		
+		<ul class="ul--list">
+			<li class="li--bullet-item"><span class="text--bold text--bold-grey">Awareness. </span>This involves knowing yourself, your needs, and your limits. Knowing your coping mechanisms (both healthy and unhealthy) and your triggers will assist you in applying coping techniques and identifying your triggers in your practice.</li>
+			<li class="li--bullet-item"><span class="text--bold text--bold-grey">Balance and boundaries. </span>This involves finding a balance between work, play, rest, and home activities, and enjoying set times each day during which you detach yourself from work.</li>
+			<li class="li--bullet-item"><span class="text--bold text--bold-grey">Consultation and connection. </span>When you are in doubt about a troubling issue or case, consult with colleagues, supervisors, and/or other supports available to you.</li>
+		</ul>
+
+
+	<aside class="aside--chart cf">
+		<img src="/assets/chapters/1/photos//Ch_01_pg_29.png" alt="">
+
+		<footer>
+			<p class="text--source"><em>Source:</em> Figure 1.1	Professional burnout resulting from exhaustion, feelings of inefficacy, and negativity can be offset by developing awareness of one’s strengths, limitations, and the need for balance and boundaries.</p>
+		</footer>
+	</aside>
+
+</section>

@@ -1,0 +1,202 @@
+---
+
+title: Social Work and Community-Based Health Care in Canada
+
+category: sidebar-history
+category_long:
+
+history_chapter: 6
+chapter_part: 5
+
+small_image: /assets/chapters/6/photos/worker-patient-outside.jpg
+small_image_caption_name: Major Health Care Reform
+
+small_image_caption_text_1: Ontario has signalled sweeping changes to community health care with a view to eliminating duplication and inefficiency.
+
+small_image_caption_text_2: Community Care Access Centres (CCACs), which were set up in 1996 to co-ordinate access to home and community care services, will be wound down starting in 2016. The province’s Local Health Integration Networks (LHINs) will play a larger role in these service areas.
+
+small_image_caption_text_3: 
+
+large_image: 
+large_image_caption_name: 
+
+large_image_caption_text: 
+large_image_caption_text_2: 
+
+---
+
+<section class="wrapper--inner wrapper--main-file cf">
+
+<p>The idea of community-based health care as an alternative to individual physician care has existed since early in the twentieth century, with the first examples appearing in the United Kingdom and the United States. Canada&rsquo;s first community-based centre&mdash;the Mount Carmel Clinic in Winnipeg&mdash;opened over 90 years ago, in 1926, and is still in operation. Ontario&rsquo;s first <span class="text--bold text--bold--grey background--span-color">community health centre (CHC)</span> opened in Sault Ste. Marie in 1963.</p>
+
+<p>Each province currently offers its own unique collection of community-based organizations and access points for health care in their province. Among the services offered are: primary care, maternity care, home support, family care clinics, community care access centres, Aboriginal health centres, family health teams, nurse practitioner-led clinics, <span class="text--red span-keyword" id="kc-12">interdisciplinary teams,</span> midwifery, and community-based palliative care.</p>
+
+<p class="text--bold text--bold-grey">The Advantageous Role of Community Health Centres</p>
+
+<p>The <span class="text--red span-keyword" id="kc-10">Canadian Association of Community Health Centres</span> is the federal voice for community health centres and community-oriented, people-centred primary health care across Canada. The association was established in 2012 to replace the previous Canadian Alliance of Community Health Centre Associations, which was first established in 1995. Once considered the &ldquo;poor cousins&rdquo; of the mainstream health-care system (because of their association with low-income and disadvantaged populations), CHCs have grown in number and size as provincial governments recognize their role in preventative medicine and health promotion. Since the mid-1980s, they have offered an ever-broadening range of client services to the general public, as well as to parents, seniors, women, and ethnic and immigrant populations.</p>
+
+<p>The underlying premise of the CHC system is that community residents, in partnership with providers and funders of health services, need to be involved in identifying the needs of their community and in designing and overseeing service delivery, and evaluating health services programs. CHCs tend to network with other health and social services agencies and are accountable to their communities through community boards. They operate on the principle that communities should work together to &ldquo;own&rdquo; health care services. They frequently address issues pertaining to the social determinants of health, such as housing, literacy, and poverty through programs and social action.</p>
+
+<p>CHCs are funded primarily by provincial grants. Additional funding is often obtained from the United Way, other foundations, and federal government programs. Funding is allocated either through a global budgeting process, based on services directed at populations, or through capitalization funding, where fixed sums are established for each registered client based on need as a reflection of age, sex, key demographic factors, and prevalence and severity of chronic illness. The use of CHCs (centres locaux des services communautaires) is most widespread in Qu&eacute;bec. Ontario comes second. There is, however, a growing interest in the CHC model across the country, both as a way to cut costs and as a community-based approach.</p>
+
+<p>An important advantage of the CHC model is the focus on prevention, education, community development, social action, and health promotion. CHCs tend to address four main determinants of health&mdash;living and working conditions, available social support, individual behaviour, and genetic makeup. Located as they are between the patient and medical practitioners, social workers are central to the provision of both direct care and community development in the CHC model of health-care delivery.</p>
+
+</section>
+
+
+<!-- Regional Differences in Health Outcomes -->
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 6 and item.chapter_part == 5 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+
+						</div>
+					</section>
+				</div>
+				
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}
+
+
+<!-- The Health-Care System in Québec -->
+{% for item in site.focus  %}
+	
+	{% if item.focus_chapter == 6 and item.chapter_part == 6 %}
+		
+		<article class="chapter--sidebar-in-focus">
+			<section id="js-accordion">
+				
+				<div class="category--{{item.category}}" >
+					<!--check chapter number-->
+					{% if page.chapter_num or item.title %}
+					<section class="chapter--focus" >
+						<header class="header--text-wrap wrapper--inner js-accordion-toggle">
+							
+							{% if item.subtitle %}
+							
+							<p class="text--bold text--bold-grey text--center"> {{ item.subtitle }}</p>
+							{% endif %}
+
+							{% if item.title %}
+								<!-- TODO find better solution for label -->
+								<h2 class="js-section-title text--center"><em class="js-category-title js-hide">{{ item.category_long }}</em> {{ item.title }} <img src="/assets/click-icon.svg" alt="Icon" class="image--click-icon"></h2>
+							{% endif %}
+							
+						</header><!-- end the chapter header wrap -->
+						
+						<div class="js-accordion-content">
+							<!-- header image + bkg -->
+							{% if item.small_image %}
+								
+								<!-- background image on header -->
+								<header style="background-image:url('{{ item.small_image }}')" class="background--image-cover header--large-image ">
+								</header>
+							{% else %}
+								
+							{% endif %}<!-- .end header image + bkg -->
+
+							{% if item.blockquote_text %}
+							<!-- get blockquote -->
+							<div class="wrapper--inner">
+								
+								<blockquote class="chapter--in-focus-quote">
+									<p class="text--quote">{{ item.blockquote_text }}</p>
+
+									{% if item.blockquote_attr %}
+										<p class="text--quote-attribution">{{ item.blockquote_attr}}</p>
+									{% endif %}
+
+								</blockquote>
+								
+							</div>
+							{% endif %}<!-- /end blockquote -->
+
+							{% if item.byline %}
+							<div class="wrapper--inner">
+								<p class="text--byline"><strong>By</strong> {{ item.byline }}</p>	
+							</div>
+							{% endif %}
+
+							{{ item.content }}
+							
+							{% endif %}<!-- end check chapter -->
+						
+						<div class="js-close wrapper--close-button">
+						    <p>✖ Close</p>
+						</div>
+
+						</div>
+					</section>
+				</div>
+				
+			</section>
+		</article>
+
+	{% endif %}
+	
+{% endfor %}
